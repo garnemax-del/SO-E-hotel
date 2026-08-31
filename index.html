@@ -97,6 +97,14 @@
     .character-cards h3{font-size:27px;margin:12px 0 15px}
     .character-cards p{font-size:13px;color:var(--muted)}
     .character-cards b{font-size:12px;display:block;margin-top:18px}
+    .character-example{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin:28px 0 18px;background:var(--navy);min-height:520px;overflow:hidden}
+    .character-example-media{min-height:520px;background:#ddd;overflow:hidden}
+    .character-example-media img{width:100%;height:100%;object-fit:cover}
+    .character-example-copy{padding:46px;align-self:center;color:#fff}
+    .character-example-copy .char-tag{color:var(--gold)}
+    .character-example-copy h3{font-family:"Bodoni Moda",serif;font-size:38px;line-height:1.08;font-weight:400;margin:0 0 18px}
+    .character-example-copy p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.45;color:rgba(255,255,255,.76);margin:0}
+    .character-example-copy b{display:block;margin-top:22px;font-size:12px;line-height:1.6;color:#fff}
     .identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:48px}
     .palette{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
     .swatch{aspect-ratio:1/1;display:flex;align-items:flex-end;padding:15px;font-size:10px;letter-spacing:.08em}
@@ -162,6 +170,7 @@
       .visual-grid{grid-template-columns:1fr}.visual-card:first-child{grid-column:auto;min-height:470px}.visual-card{min-height:420px}
       .palette{grid-template-columns:1fr 1fr 1fr}
       .character-media{min-height:470px}.character-text h3{font-size:38px}
+      .character-example{grid-template-columns:1fr;min-height:0}.character-example-media{min-height:0;aspect-ratio:3/4}.character-example-copy{padding:30px 24px}.character-example-copy h3{font-size:32px}
       .intensity-row{grid-template-columns:70px 1fr}.intensity-row span:last-child{grid-column:2}
       .feed-header{display:block}.feed-tabs{margin-top:24px}.feed-grid{gap:2px}
       footer{display:block}footer span{display:block;margin:5px 0}
@@ -298,6 +307,18 @@
             <h3>Движение / близость / современная мода</h3>
             <p>Не «девушка в красивом отеле». Современная героиня с характером: халат говорит «отель», а движение, носки с лоферами, немного странный кадр и одна тонкая деталь делают изображение SOIE.</p>
             <div class="char-job"><strong>Что продаёт:</strong> желание оказаться внутри, editorial-уровень бренда и эмоциональную связь.</div>
+          </div>
+        </div>
+
+        <div class="character-example">
+          <div class="character-example-media">
+            <img id="soie-woman-example" alt="SOIE woman — пример lifestyle-кадра" loading="lazy">
+          </div>
+          <div class="character-example-copy">
+            <div class="char-tag">ПРИМЕР КАДРА · SOIE WOMAN</div>
+            <h3>Номер остаётся реальным. Меняется история.</h3>
+            <p>Кровать, окно, халат — всё это по-прежнему показывает сам продукт. Но человек, движение и современный styling превращают обычную фотографию номера в момент жизни внутри SOIE.</p>
+            <b>Именно эту разницу я хочу показать в Instagram: не просто «вот наш номер», а «вот как может ощущаться утро в SOIE».</b>
           </div>
         </div>
 
@@ -462,6 +483,16 @@
   </footer>
 
   <script>
+    (async()=>{
+      const img=document.getElementById('soie-woman-example');
+      if(img){
+        try{
+          const parts=await Promise.all([0,1,2,3,4,5,6].map(i=>fetch('assets/woman/c'+i+'.txt').then(r=>r.text())));
+          img.src='data:image/jpeg;base64,'+parts.join('');
+        }catch(e){ console.warn('SOIE reference image could not load',e); }
+      }
+    })();
+
     const buttons=document.querySelectorAll('.feed-tabs button');
     const layouts=document.querySelectorAll('.feed-layout');
     buttons.forEach(btn=>btn.addEventListener('click',()=>{
