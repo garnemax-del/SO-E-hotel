@@ -1,62 +1,470 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SOIE Boutique Hotel — визуальная стратегия</title>
-<style>
-:root{--n:#06112f;--g:#c7a35a;--i:#f4efe6;--b:#702b3d;--ink:#171717;--m:#6c675f}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--ink);line-height:1.55}
-.hero{min-height:88vh;padding:7vw 6vw;background:linear-gradient(150deg,#06112f,#0b183b);color:white;display:flex;align-items:center}
-.wrap{max-width:1280px;margin:auto}h1,h2,h3{font-family:Georgia,serif;font-weight:400}
-h1{font-size:clamp(50px,7vw,100px);line-height:.98;margin:0 0 25px}h1 em{color:var(--g)}h2{font-size:clamp(38px,5vw,70px);line-height:1.08}
-.hero p,.lead{font-size:clamp(18px,2vw,25px);max-width:900px}.hero p{color:#ffffffb8}
-section{padding:90px 6vw}.alt{background:var(--i)}.dark{background:var(--n);color:white}
-.k{font-size:11px;letter-spacing:.16em;color:var(--g);text-transform:uppercase}
-.statement{font:32px Georgia,serif;border-left:2px solid var(--g);padding:20px 25px;margin:35px 0;max-width:900px}
-.photos{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:10px}figure{margin:0;position:relative;min-height:360px;overflow:hidden}figure:first-child{grid-row:span 2}
-figure img{width:100%;height:100%;object-fit:cover}figcaption{position:absolute;left:10px;bottom:10px;background:#06112fd9;color:white;padding:7px 9px;font-size:11px}
-.video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.vid{aspect-ratio:9/16;position:relative;background:#111;overflow:hidden}.vid video{width:100%;height:100%;object-fit:cover}
-.vid span{position:absolute;left:10px;bottom:10px;background:#06112fd9;color:white;padding:7px 9px;font-size:10px}
-.ig{display:grid;grid-template-columns:400px 1fr;gap:45px}.phone{border:1px solid #ddd;border-radius:28px;padding:14px;box-shadow:0 20px 55px #00000018}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}.tile{aspect-ratio:3/4;overflow:hidden;background:#ddd;position:relative}.tile img,.tile video{width:100%;height:100%;object-fit:cover}
-.txt{display:grid;place-items:center;text-align:center;font:13px Georgia,serif}.navy{background:var(--n);color:white}.burg{background:var(--b);color:white}.ivory{background:var(--i)}
-.sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.size{border:1px solid #ddd;padding:20px}.size strong{display:block;font:30px Georgia,serif;color:var(--b)}
-@media(max-width:900px){.photos,.video-grid,.ig,.sizes{grid-template-columns:1fr 1fr}figure:first-child{grid-row:auto;grid-column:span 2}}
-@media(max-width:600px){section{padding:70px 5vw}.photos,.video-grid,.ig,.sizes{grid-template-columns:1fr}figure:first-child{grid-column:auto}}
-</style></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SOIE Boutique Hotel — Visual Brand Book 2026</title>
+  <meta name="description" content="SOIE Boutique Hotel Istanbul — визуальная стратегия, Instagram, Reels и бренд-система 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&family=Prata&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#000A24;--gold:#D1A447;--ivory:#F4F0E7;--stone:#C9BCAA;
+      --burgundy:#6E2430;--walnut:#3B2A22;--ink:#161616;--muted:#706c66;
+      --line:rgba(22,22,22,.14);--white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:Manrope,Arial,sans-serif;line-height:1.65}
+    img,video{display:block;width:100%}
+    a{color:inherit}
+    .topbar{
+      position:sticky;top:0;z-index:60;height:64px;padding:0 4vw;
+      display:flex;align-items:center;gap:30px;background:rgba(0,10,36,.94);
+      backdrop-filter:blur(18px);color:#fff;border-bottom:1px solid rgba(255,255,255,.1)
+    }
+    .brand{font-family:"Bodoni Moda",serif;font-size:28px;letter-spacing:.16em;color:var(--gold);text-decoration:none}
+    .topbar nav{margin-left:auto;display:flex;gap:22px;align-items:center}
+    .topbar nav a{font-size:11px;text-decoration:none;letter-spacing:.08em;opacity:.72}
+    .topbar nav a:hover{opacity:1;color:var(--gold)}
+    .version{font-size:10px;opacity:.45;white-space:nowrap}
+    .hero{min-height:calc(100vh - 64px);background:var(--navy);color:#fff;position:relative;display:grid;place-items:center;padding:90px 7vw;overflow:hidden}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(209,164,71,.18);border-radius:50%}
+    .hero:before{width:560px;height:560px;right:-250px;top:-210px}
+    .hero:after{width:340px;height:340px;left:-170px;bottom:-180px}
+    .hero-inner{text-align:center;max-width:1050px;position:relative;z-index:2}
+    .hero-mark{font-family:"Bodoni Moda",serif;font-size:clamp(64px,13vw,150px);letter-spacing:.17em;color:var(--gold);line-height:.8;margin:24px 0 42px}
+    .eyebrow{font-size:10px;font-weight:600;letter-spacing:.23em;text-transform:uppercase;margin:0 0 20px}
+    .gold{color:var(--gold)!important}
+    .hero h1,.section h2,.final h2{font-family:"Bodoni Moda",serif;font-weight:400;line-height:1.06;margin:0}
+    .hero h1{font-size:clamp(42px,7vw,88px)}
+    .hero h1 em{font-style:italic;color:var(--gold)}
+    .hero-lead{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,2.2vw,29px);max-width:800px;margin:34px auto 0;color:rgba(255,255,255,.72)}
+    .scroll-note{position:absolute;bottom:24px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.45}
+    .section{position:relative;padding:110px 6vw}
+    .section-copy{max-width:1180px;margin:0 auto}
+    .section-number{position:absolute;top:44px;left:3vw;font-family:"Bodoni Moda",serif;font-size:13px;letter-spacing:.1em;color:#9a958e}
+    .section h2{font-size:clamp(38px,5.2vw,72px);max-width:1040px}
+    .section h2 span{color:var(--burgundy)}
+    .big-copy{font-family:"Cormorant Garamond",serif;font-size:clamp(22px,2.2vw,31px);max-width:900px;margin:34px 0;color:#4e4a45}
+    .statement-card{margin-top:46px;padding:42px;border:1px solid var(--line);display:grid;grid-template-columns:1.1fr .9fr;gap:30px;background:var(--ivory)}
+    .statement-en{font-family:"Prata",serif;font-size:clamp(26px,3vw,44px);line-height:1.18}
+    .statement-ru{display:flex;align-items:flex-end;font-size:14px;color:var(--muted)}
+    .navy{background:var(--navy);color:#fff}
+    .ivory{background:var(--ivory)}
+    .light{color:#fff!important}
+    .booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px}
+    .booking-card{padding:36px;border:1px solid rgba(255,255,255,.16);min-height:245px;background:rgba(255,255,255,.035)}
+    .booking-card.accent{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+    .mini-label{font-size:10px;letter-spacing:.18em;font-weight:600;margin-bottom:24px}
+    .booking-card h3{font-family:"Bodoni Moda",serif;font-size:34px;font-weight:400;margin:0 0 16px}
+    .booking-card p{font-size:14px;max-width:500px;margin:0;opacity:.78}
+    .journey{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:40px 0 12px;font-size:12px;letter-spacing:.13em}
+    .journey b{color:var(--gold);font-weight:400}
+    .journey-note{font-size:12px;color:rgba(255,255,255,.55)}
+    .roles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
+    .role{background:#fff;padding:34px}
+    .role strong{font-family:"Bodoni Moda",serif;font-size:32px;font-weight:400;display:block;margin-bottom:12px}
+    .role span{font-size:13px;color:var(--muted)}
+    .visual-grid{display:grid;grid-template-columns:1.35fr .65fr .65fr;gap:10px;margin-top:42px}
+    .visual-card{position:relative;overflow:hidden;min-height:330px;background:#ddd}
+    .visual-card:first-child{grid-row:span 2;min-height:670px}
+    .visual-card img{height:100%;object-fit:cover;transition:transform .5s ease}
+    .visual-card:hover img{transform:scale(1.02)}
+    .visual-card .cap{position:absolute;left:14px;bottom:14px;background:rgba(0,10,36,.88);color:#fff;padding:8px 10px;font-size:10px;letter-spacing:.08em}
+    .visual-note{max-width:860px;margin:34px 0 0;font-family:"Cormorant Garamond",serif;font-size:24px;color:#555049}
+    .sensory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
+    .sense{padding:30px 26px;border-top:1px solid var(--gold);background:#fff}
+    .sense i{font-family:"Bodoni Moda",serif;font-size:46px;font-style:normal;color:var(--gold)}
+    .sense h3{font-family:"Bodoni Moda",serif;font-size:27px;font-weight:400;margin:10px 0}
+    .sense p{font-size:13px;color:var(--muted);margin:0}
+    .istanbul-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
+    .istanbul-item{padding:22px 24px;background:var(--ivory);font-size:14px}
+    .istanbul-item b{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;margin-bottom:5px;color:var(--burgundy)}
+    .characters{background:#f7f4ef}
+    .character-feature{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:stretch;margin-top:50px}
+    .character-media{min-height:560px;overflow:hidden;background:#ddd}
+    .character-media img,.character-media video{height:100%;object-fit:cover}
+    .character-text{padding:24px 0;align-self:center}
+    .char-tag{font-size:10px;letter-spacing:.2em;font-weight:600;color:var(--burgundy);margin-bottom:18px}
+    .character-text h3,.character-cards h3{font-family:"Bodoni Moda",serif;font-weight:400;line-height:1.08}
+    .character-text h3{font-size:44px;margin:0 0 22px}
+    .character-text p{font-family:"Cormorant Garamond",serif;font-size:23px;color:#4f4b46}
+    .char-job{margin-top:28px;border-left:2px solid var(--gold);padding:12px 0 12px 18px;font-size:14px}
+    .character-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+    .character-cards article{background:#fff;padding:28px;min-height:300px}
+    .character-cards h3{font-size:27px;margin:12px 0 15px}
+    .character-cards p{font-size:13px;color:var(--muted)}
+    .character-cards b{font-size:12px;display:block;margin-top:18px}
+    .identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:48px}
+    .palette{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .swatch{aspect-ratio:1/1;display:flex;align-items:flex-end;padding:15px;font-size:10px;letter-spacing:.08em}
+    .s-navy{background:var(--navy);color:#fff}.s-gold{background:var(--gold)}.s-ivory{background:var(--ivory)}.s-stone{background:var(--stone)}.s-burg{background:var(--burgundy);color:#fff}.s-walnut{background:var(--walnut);color:#fff}
+    .type-stack{border-top:1px solid var(--line)}
+    .type-row{padding:22px 0;border-bottom:1px solid var(--line)}
+    .type-row b{display:block;font-size:10px;letter-spacing:.16em;margin-bottom:9px}
+    .bodoni{font-family:"Bodoni Moda",serif;font-size:34px}.cormorant{font-family:"Cormorant Garamond",serif;font-size:34px}.prata{font-family:Prata,serif;font-size:28px}.manrope{font-family:Manrope,sans-serif;font-size:22px}
+    .identity-notes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+    .identity-note{border:1px solid var(--line);padding:25px}
+    .identity-note h3{font-family:"Bodoni Moda",serif;font-size:28px;font-weight:400;margin:0 0 10px}
+    .identity-note p{font-size:13px;color:var(--muted);margin:0}
+    .intensity{margin-top:54px}
+    .intensity-row{display:grid;grid-template-columns:110px 1fr 1fr;gap:18px;padding:19px 0;border-top:1px solid var(--line);font-size:13px}
+    .intensity-row strong{font-family:"Bodoni Moda",serif;font-size:25px;font-weight:400}
+    .feed{background:#111;color:#fff}
+    .feed-header{display:flex;justify-content:space-between;gap:30px;align-items:end}
+    .feed-tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .feed-tabs button{appearance:none;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;padding:10px 14px;font:600 10px Manrope;letter-spacing:.1em;cursor:pointer}
+    .feed-tabs button.active{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+    .feed-layout{display:none;margin-top:42px}
+    .feed-layout.active{display:block}
+    .phone-feed{max-width:930px;margin:auto;background:#050505;padding:8px;border:1px solid rgba(255,255,255,.08)}
+    .feed-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+    .feed-tile{aspect-ratio:3/4;overflow:hidden;position:relative;background:#222}
+    .feed-tile img,.feed-tile video{height:100%;object-fit:cover}
+    .feed-txt{display:grid;place-items:center;text-align:center;padding:20px;font-family:"Bodoni Moda",serif;font-size:clamp(20px,2.4vw,34px);line-height:1.1}
+    .feed-txt small{font-family:Manrope,sans-serif;font-size:8px;letter-spacing:.18em;margin-top:10px}
+    .feed-navy{background:var(--navy)}.feed-burg{background:var(--burgundy)}.feed-ivory{background:var(--ivory);color:var(--ink)}.feed-gold{background:var(--gold);color:var(--navy)}
+    .feed-copy{max-width:900px;margin:32px auto 0;color:rgba(255,255,255,.65);font-size:14px}
+    .feed-copy strong{color:#fff}
+    .motion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:44px}
+    .motion{aspect-ratio:9/16;position:relative;background:#111;overflow:hidden}
+    .motion video{height:100%;object-fit:cover}
+    .motion span{position:absolute;left:10px;bottom:10px;background:rgba(0,10,36,.86);color:#fff;padding:7px 9px;font-size:9px;letter-spacing:.08em}
+    .motion-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
+    .motion-rule{border-top:1px solid var(--gold);padding:22px 0}
+    .motion-rule h3{font-family:"Bodoni Moda",serif;font-size:27px;font-weight:400;margin:0 0 10px}
+    .motion-rule p{font-size:13px;color:var(--muted)}
+    .rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:46px}
+    .rules-grid>div{padding:28px;background:#fff;border:1px solid var(--line)}
+    .rules-grid span{font-family:"Bodoni Moda",serif;font-size:34px;color:var(--gold)}
+    .rules-grid h3{font-family:"Bodoni Moda",serif;font-size:27px;font-weight:400;margin:12px 0}
+    .rules-grid p{font-size:13px;color:var(--muted);margin:0}
+    .owner-note{background:var(--ivory);padding:30px 34px;border-left:2px solid var(--gold);margin-top:36px;max-width:980px}
+    .owner-note strong{display:block;font-family:"Bodoni Moda",serif;font-size:26px;font-weight:400;margin-bottom:8px}
+    .final{padding:120px 7vw;text-align:center;background:var(--navy);color:#fff}
+    .final h2{font-size:clamp(44px,6vw,82px);max-width:1050px;margin:auto}
+    .final>p:not(.eyebrow){font-family:"Cormorant Garamond",serif;font-size:30px;color:rgba(255,255,255,.68)}
+    .final-line{margin-top:46px;font-size:10px;letter-spacing:.16em;color:var(--gold)}
+    footer{display:flex;justify-content:space-between;gap:20px;padding:24px 4vw;background:#05070d;color:rgba(255,255,255,.44);font-size:10px;letter-spacing:.08em}
+    @media(max-width:1000px){
+      .topbar nav{display:none}.version{margin-left:auto}
+      .roles,.sensory-grid,.character-cards,.motion-grid{grid-template-columns:1fr 1fr}
+      .visual-grid{grid-template-columns:1fr 1fr}.visual-card:first-child{grid-column:span 2;grid-row:auto;min-height:600px}
+      .identity-grid,.character-feature{grid-template-columns:1fr}
+      .character-media{min-height:520px}
+      .motion-rules,.rules-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:650px){
+      .section{padding:84px 5vw}.section-number{display:none}.hero{padding:70px 6vw}
+      .statement-card,.booking-grid,.roles,.sensory-grid,.istanbul-list,.identity-notes,.character-cards,.motion-grid,.motion-rules,.rules-grid{grid-template-columns:1fr}
+      .visual-grid{grid-template-columns:1fr}.visual-card:first-child{grid-column:auto;min-height:470px}.visual-card{min-height:420px}
+      .palette{grid-template-columns:1fr 1fr 1fr}
+      .character-media{min-height:470px}.character-text h3{font-size:38px}
+      .intensity-row{grid-template-columns:70px 1fr}.intensity-row span:last-child{grid-column:2}
+      .feed-header{display:block}.feed-tabs{margin-top:24px}.feed-grid{gap:2px}
+      footer{display:block}footer span{display:block;margin:5px 0}
+    }
+  </style>
+</head>
 <body>
-<section class="hero"><div class="wrap"><div class="k">SOIE Boutique Hotel · Istanbul</div><h1>Современный Стамбул.<br><em>Память прошлого — в деталях.</em></h1><p>Я строю визуальную коммуникацию SOIE как современный бутик-отель с собственным характером. История здесь не изображается буквально — она чувствуется через детали, движение, стиль и архитектуру.</p></div></section>
+  <header class="topbar">
+    <a class="brand" href="#top">SOIE</a>
+    <nav>
+      <a href="#idea">Идея</a>
+      <a href="#visual">Визуал</a>
+      <a href="#istanbul">Стамбул</a>
+      <a href="#characters">Герои</a>
+      <a href="#identity">Айдентика</a>
+      <a href="#feed">Instagram</a>
+      <a href="#motion">Reels</a>
+    </nav>
+    <span class="version">Visual Brand Book · v2</span>
+  </header>
 
-<section><div class="wrap"><div class="k">01 · стратегия</div><h2>Booking показывает отель. Instagram должен заставить захотеть оказаться внутри.</h2><p class="lead">На Booking человек понимает продукт. В Instagram я создаю желание и узнаваемость. Поэтому лента не дублирует каталог номеров, а добавляет SOIE характер.</p><div class="statement">Современный Стамбул + культурная память на уровне деталей, а не туристических клише.</div></div></section>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow gold">SOIE BOUTIQUE HOTEL · ISTANBUL</p>
+        <div class="hero-mark">SOIE</div>
+        <h1>Современный Стамбул.<br><em>Память прошлого — в деталях.</em></h1>
+        <p class="hero-lead">Я строю визуальный язык SOIE так, чтобы человек сначала захотел этот опыт, а уже потом пошёл проверять номер, цену и даты.</p>
+      </div>
+      <div class="scroll-note">↓ Visual brand direction 2026</div>
+    </section>
 
-<section class="alt"><div class="wrap"><div class="k">02 · подготовленные визуалы</div><h2>Используем все подготовленные фотографии.</h2><div class="photos"><figure><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6443.png" alt="SOIE visual 1"><figcaption>Подготовленный визуал 01</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6447.png" alt="SOIE visual 2"><figcaption>Подготовленный визуал 02</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6478.png" alt="SOIE visual 3"><figcaption>Подготовленный визуал 03</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6520.png" alt="SOIE visual 4"><figcaption>Подготовленный визуал 04</figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6597.png" alt="SOIE visual 5"><figcaption>Подготовленный визуал 05</figcaption></figure></div></div></section>
+    <section id="idea" class="section">
+      <div class="section-number">01</div>
+      <div class="section-copy">
+        <p class="eyebrow">ЧТО ТАКОЕ SOIE</p>
+        <h2>Не «исторический отель».<br>Не «султанский Стамбул».<br><span>Современный бутик-отель с памятью города.</span></h2>
+        <p class="big-copy">Я не хочу превращать историю здания и района в декорацию. Для SOIE прошлое должно ощущаться спокойно: в материале, цвете, детали одежды, жесте, орнаменте или звуке. Это современный Стамбул, у которого есть глубина.</p>
+        <div class="statement-card">
+          <div class="statement-en">The Istanbul of today.<br>The memory of what came before.</div>
+          <div class="statement-ru">Современный город + культурная память + fashion/editorial взгляд. История здесь не изображается буквально — она ощущается.</div>
+        </div>
+      </div>
+    </section>
 
-<section><div class="wrap"><div class="k">03 · Instagram</div><h2>Рекомендованный баланс: 60% продукт / 40% имиджевый контент.</h2>
-<div class="ig"><div class="phone"><div class="grid">
-<div class="tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6443.png"></div>
-<div class="tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-4450041590053018789.mov"></video></div>
-<div class="tile navy txt">SOIE<br>ISTANBUL</div>
-<div class="tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6447.png"></div>
-<div class="tile ivory txt">THE CITY<br>IN DETAILS</div>
-<div class="tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6478.png"></div>
-<div class="tile burg txt">MODERN<br>ISTANBUL</div>
-<div class="tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-5700102579430439523.mov"></video></div>
-<div class="tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6520.png"></div>
-<div class="tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6597.png"></div>
-<div class="tile navy txt">MEMORY<br>IN DETAILS</div>
-<div class="tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/4289855894515363739.mov"></video></div>
-</div></div>
-<div><p class="lead">Сетка проектируется сразу в вертикальном 3:4. Reels снимаем 9:16, но главный объект держим в центральной зоне, чтобы превью профиля не разрушало композицию.</p>
-<div class="sizes"><div class="size"><b>Пост</b><strong>1080×1440</strong>3:4</div><div class="size"><b>Reels / Stories</b><strong>1080×1920</strong>9:16</div><div class="size"><b>Превью в сетке</b><strong>3:4</strong>композиция сохраняется</div></div></div></div></div></section>
+    <section class="section navy">
+      <div class="section-number light">02</div>
+      <div class="section-copy">
+        <p class="eyebrow gold">ЗАЧЕМ ЭТО НУЖНО ДЛЯ БРОНИРОВАНИЙ</p>
+        <h2 class="light">Booking показывает отель.<br><span class="gold">Instagram должен заставить захотеть оказаться внутри.</span></h2>
+        <div class="booking-grid">
+          <article class="booking-card">
+            <div class="mini-label">BOOKING.COM</div>
+            <h3>«Я понимаю, что получу»</h3>
+            <p>Номера, ванная, удобства, расположение, отзывы и цена. Здесь человеку нужна ясность и доверие.</p>
+          </article>
+          <article class="booking-card accent">
+            <div class="mini-label">INSTAGRAM</div>
+            <h3>«Я хочу жить именно здесь»</h3>
+            <p>Люди, движение, характер, город, маленькие ритуалы и ощущение SOIE. Здесь рождается эмоциональный выбор.</p>
+          </article>
+        </div>
+        <div class="journey"><span>ВИЖУ</span><b>→</b><span>ЧУВСТВУЮ</span><b>→</b><span>ХОЧУ</span><b>→</b><span>ПРОВЕРЯЮ</span><b>→</b><span>БРОНИРУЮ</span></div>
+        <p class="journey-note"><strong>Instagram:</strong> первые три шага · <strong>Booking:</strong> последние два.</p>
+      </div>
+    </section>
 
-<section class="dark"><div class="wrap"><div class="k">04 · Reels / видео-референсы</div><h2>Используем все загруженные ролики как библиотеку движения, монтажа и ритма.</h2><div class="video-grid"><div class="vid"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-4450041590053018789.mov"></video><span>ВИДЕО-РЕФЕРЕНС 01</span></div>
-<div class="vid"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-5700102579430439523.mov"></video><span>ВИДЕО-РЕФЕРЕНС 02</span></div>
-<div class="vid"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/4289855894515363739.mov"></video><span>ВИДЕО-РЕФЕРЕНС 03</span></div>
-<div class="vid"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video><span>ВИДЕО-РЕФЕРЕНС 04</span></div></div></div></section>
+    <section class="section">
+      <div class="section-number">03</div>
+      <div class="section-copy">
+        <p class="eyebrow">РОЛЬ КОНТЕНТА</p>
+        <h2>Лента не должна быть каталогом номеров.</h2>
+        <p class="big-copy">Продуктовый контент нужен, но он работает сильнее, когда существует рядом с имиджевым слоем. Рекомендованный баланс — примерно 60% продукт / 40% характер, люди, город и визуальные истории.</p>
+        <div class="roles">
+          <div class="role"><strong>Продукт</strong><span>Номер, кровать, ванная, детали сервиса, завтрак, виды. Даёт понимание.</span></div>
+          <div class="role"><strong>Характер</strong><span>Герои, жесты, странный crop, одежда, движение. Даёт узнаваемость.</span></div>
+          <div class="role"><strong>Город</strong><span>Стамбул как ощущение вокруг проживания, а не набор открыток. Даёт желание приехать.</span></div>
+        </div>
+      </div>
+    </section>
 
-<section><div class="wrap"><div class="k">05 · правила</div><h2>История вплетается, но не превращается в костюм.</h2><p class="lead">Никаких фесок, кальянов, псевдоосманской театральности и «туристического Стамбула». Интерьер не меняем. Характер создаём камерой, человеком, движением, светом, одеждой и одной точной культурной деталью.</p></div></section>
-</body></html>
+    <section id="visual" class="section ivory">
+      <div class="section-number">04</div>
+      <div class="section-copy">
+        <p class="eyebrow">ПОДГОТОВЛЕННЫЕ ВИЗУАЛЫ</p>
+        <h2>Интерьер остаётся правдивым.<br><span>Характер создаём камерой.</span></h2>
+        <div class="visual-grid">
+          <div class="visual-card"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6443.png" alt="SOIE visual 01"><div class="cap">PREPARED VISUAL · 01</div></div>
+          <div class="visual-card"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6447.png" alt="SOIE visual 02"><div class="cap">PREPARED VISUAL · 02</div></div>
+          <div class="visual-card"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6478.png" alt="SOIE visual 03"><div class="cap">PREPARED VISUAL · 03</div></div>
+          <div class="visual-card"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6520.png" alt="SOIE visual 04"><div class="cap">PREPARED VISUAL · 04</div></div>
+          <div class="visual-card"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6597.png" alt="SOIE visual 05"><div class="cap">PREPARED VISUAL · 05</div></div>
+        </div>
+        <p class="visual-note">Не переставляем мебель и не выдумываем другой отель. Чтобы кадр захотелось разглядывать, добавляем жизнь: движение, человека, отражение, жест, ткань, неожиданный ракурс или одну культурную деталь.</p>
+      </div>
+    </section>
+
+    <section id="istanbul" class="section">
+      <div class="section-number">05</div>
+      <div class="section-copy">
+        <p class="eyebrow">СТАМБУЛ БЕЗ КЛИШЕ</p>
+        <h2>Город должен считываться<br><span>не через декорации, а через память.</span></h2>
+        <p class="big-copy">Не фески, кальяны и «султанская» театральность. Нам нужны знаки, которые человек узнаёт почти подсознательно — и которые остаются современными.</p>
+        <div class="sensory-grid">
+          <div class="sense"><i>01</i><h3>Орнамент</h3><p>Фрагмент узора, геометрия плитки, линия ковра, текстура решётки. Никогда не весь «турецкий набор» сразу.</p></div>
+          <div class="sense"><i>02</i><h3>Звук</h3><p>Чайная ложка о стекло, городской гул, шаги по камню, паромный гудок вдали, дождь по окну.</p></div>
+          <div class="sense"><i>03</i><h3>Жест</h3><p>Поправить манжету, открыть штору, поставить стакан, затянуть пояс халата. Человеческое действие сильнее постановки.</p></div>
+          <div class="sense"><i>04</i><h3>Материал</h3><p>Латунь, дерево, камень, ткань, стекло. Память прошлого можно показать через фактуру, не превращая кадр в музей.</p></div>
+        </div>
+        <div class="istanbul-list">
+          <div class="istanbul-item"><b>Узнаваемо, но не открытка</b>Отражение парома, след чайки, тень минарета, красная линия трамвая, мокрый камень, газетный киоск, стакан чая.</div>
+          <div class="istanbul-item"><b>Современный контраст</b>Чем историчнее архитектура, тем современнее одежда и пластика героя.</div>
+          <div class="istanbul-item"><b>Один акцент</b>В кадре достаточно одной культурной ссылки. Если она считывается раньше человека или отеля — её уже слишком много.</div>
+          <div class="istanbul-item"><b>Город как ритуал</b>Выйти утром, вернуться после прогулки, оставить книгу, снять пальто, открыть окно. Стамбул существует между этими действиями.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="characters" class="section characters">
+      <div class="section-number">06</div>
+      <div class="section-copy">
+        <p class="eyebrow">ГЕРОИ SOIE</p>
+        <h2>Не модели в отеле.<br><span>Люди, у которых уже есть жизнь.</span></h2>
+
+        <div class="character-feature">
+          <div class="character-media"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-4450041590053018789.mov"></video></div>
+          <div class="character-text">
+            <div class="char-tag">SOIE WOMAN</div>
+            <h3>Движение / близость / современная мода</h3>
+            <p>Не «девушка в красивом отеле». Современная героиня с характером: халат говорит «отель», а движение, носки с лоферами, немного странный кадр и одна тонкая деталь делают изображение SOIE.</p>
+            <div class="char-job"><strong>Что продаёт:</strong> желание оказаться внутри, editorial-уровень бренда и эмоциональную связь.</div>
+          </div>
+        </div>
+
+        <div class="character-cards">
+          <article><div class="char-tag">SOIE KIDS</div><h3>Мода / ирония / культурная деталь</h3><p>Не стандартная детская гостиничная съёмка. Взрослый fashion-код — свободный крой, серьёзность, navy, burgundy, cream — переносим на детей. Историческая отсылка остаётся одной деталью, а не костюмом.</p><b>Что продаёт: характер бренда и семейный сегмент без банальной family-рекламы.</b></article>
+          <article><div class="char-tag">SOIE MAN</div><h3>Сдержанность / космополитичный Стамбул</h3><p>Широкие брюки, рубашка, navy jacket, часы или signet ring. Лицо не обязательно. Чем сильнее исторична архитектура, тем современнее человек.</p><b>Что продаёт: вкус, дизайн, city break.</b></article>
+          <article><div class="char-tag">SOIE COUPLE</div><h3>Два человека / один городской ритуал</h3><p>Не объятия на кровати. Один выходит, второй поправляет часы; разные стороны зеркала; завтрак руками; один герой резкий, второй смазан.</p><b>Что продаёт: weekend и романтику без клише.</b></article>
+          <article><div class="char-tag">SOIE EXPLORER</div><h3>Культура / город / любопытство</h3><p>Человек приехал не просто ночевать: архитектура, книги, маршрут, окна, детали улицы, возвращение в отель после прогулки.</p><b>Что продаёт: сам Стамбул как часть проживания.</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="identity" class="section">
+      <div class="section-number">07</div>
+      <div class="section-copy">
+        <p class="eyebrow">АЙДЕНТИКА</p>
+        <h2>Премиальность без тяжести.<br><span>История без театра.</span></h2>
+        <div class="identity-grid">
+          <div>
+            <div class="palette">
+              <div class="swatch s-navy">NAVY<br>#000A24</div>
+              <div class="swatch s-gold">GOLD<br>#D1A447</div>
+              <div class="swatch s-ivory">IVORY<br>#F4F0E7</div>
+              <div class="swatch s-stone">STONE<br>#C9BCAA</div>
+              <div class="swatch s-burg">BURGUNDY<br>#6E2430</div>
+              <div class="swatch s-walnut">WALNUT<br>#3B2A22</div>
+            </div>
+          </div>
+          <div class="type-stack">
+            <div class="type-row"><b>PRIMARY EDITORIAL</b><div class="bodoni">Bodoni Moda — desire</div></div>
+            <div class="type-row"><b>LONG FORM / ATMOSPHERE</b><div class="cormorant">Cormorant Garamond — memory</div></div>
+            <div class="type-row"><b>ACCENT</b><div class="prata">Prata — signature</div></div>
+            <div class="type-row"><b>FUNCTIONAL</b><div class="manrope">Manrope — clarity</div></div>
+          </div>
+        </div>
+        <div class="identity-notes">
+          <div class="identity-note"><h3>Логотип</h3><p>Используем как подпись, а не водяной знак на каждом кадре. Бренд должен становиться узнаваемым ещё до появления логотипа.</p></div>
+          <div class="identity-note"><h3>Цвет</h3><p>Navy и ivory — база. Gold — точный акцент. Burgundy добавляет глубину и fashion-настроение, но не должен превращать ленту в «винтаж».</p></div>
+          <div class="identity-note"><h3>Текст</h3><p>Коротко, уверенно, без перегруженных рекламных формулировок. Заголовки могут быть почти журнальными.</p></div>
+          <div class="identity-note"><h3>Ритм</h3><p>Крупный кадр → тишина → деталь → движение → продукт. Лента должна дышать, а не пытаться рассказать всё одновременно.</p></div>
+        </div>
+
+        <div class="intensity">
+          <p class="eyebrow">КУЛЬТУРНАЯ ИНТЕНСИВНОСТЬ</p>
+          <div class="intensity-row"><strong>0</strong><span>Чистый современный lifestyle.</span><span>Работает как нейтральная база.</span></div>
+          <div class="intensity-row"><strong>1</strong><span>Одна деталь: материал, орнамент, звук, аксессуар.</span><span>Оптимальный уровень для большинства контента.</span></div>
+          <div class="intensity-row"><strong>2</strong><span>Деталь + архитектурный контекст.</span><span>Использовать точечно в editorial-сюжетах.</span></div>
+          <div class="intensity-row"><strong>3</strong><span>Очевидный исторический образ.</span><span>Избегать: слишком быстро превращается в костюм и туристическое клише.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feed" class="section feed">
+      <div class="section-number light">08</div>
+      <div class="section-copy">
+        <div class="feed-header">
+          <div>
+            <p class="eyebrow gold">INSTAGRAM SYSTEM</p>
+            <h2 class="light">Лента должна выглядеть как<br><span class="gold">журнал о жизни внутри SOIE.</span></h2>
+          </div>
+          <div class="feed-tabs">
+            <button class="active" data-feed="desire">DESIRE</button>
+            <button data-feed="product">PRODUCT</button>
+            <button data-feed="rhythm">RHYTHM</button>
+          </div>
+        </div>
+
+        <div class="feed-layout active" id="feed-desire">
+          <div class="phone-feed"><div class="feed-grid">
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6443.png" alt=""></div>
+            <div class="feed-tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-4450041590053018789.mov"></video></div>
+            <div class="feed-tile feed-txt feed-navy">SOIE<small>ISTANBUL</small></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6478.png" alt=""></div>
+            <div class="feed-tile feed-txt feed-ivory">THE CITY<br>IN DETAILS<small>MEMORY / MATERIAL / LIGHT</small></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6447.png" alt=""></div>
+            <div class="feed-tile feed-txt feed-burg">MODERN<br>ISTANBUL<small>NO COSTUME</small></div>
+            <div class="feed-tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-5700102579430439523.mov"></video></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6520.png" alt=""></div>
+          </div></div>
+          <p class="feed-copy"><strong>Логика:</strong> сначала желание и характер. Продукт встроен внутрь истории, а не существует отдельным каталогом.</p>
+        </div>
+
+        <div class="feed-layout" id="feed-product">
+          <div class="phone-feed"><div class="feed-grid">
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6447.png" alt=""></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6520.png" alt=""></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6597.png" alt=""></div>
+            <div class="feed-tile feed-txt feed-gold">STAY<br>WITH CHARACTER<small>SOIE</small></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6443.png" alt=""></div>
+            <div class="feed-tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/4289855894515363739.mov"></video></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6478.png" alt=""></div>
+            <div class="feed-tile feed-txt feed-navy">ROOMS<br>ARE ONLY<br>THE START<small>ISTANBUL</small></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6520.png" alt=""></div>
+          </div></div>
+          <p class="feed-copy"><strong>Логика:</strong> когда нужно усилить продажу номера, мы не теряем fashion-язык. Даже продуктовый блок должен выглядеть частью одной визуальной системы.</p>
+        </div>
+
+        <div class="feed-layout" id="feed-rhythm">
+          <div class="phone-feed"><div class="feed-grid">
+            <div class="feed-tile feed-txt feed-ivory">A QUIET<br>MORNING<small>SOIE</small></div>
+            <div class="feed-tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6597.png" alt=""></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6443.png" alt=""></div>
+            <div class="feed-tile feed-txt feed-burg">MEMORY<br>IN DETAILS<small>ISTANBUL</small></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6478.png" alt=""></div>
+            <div class="feed-tile"><video muted autoplay loop playsinline src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-5700102579430439523.mov"></video></div>
+            <div class="feed-tile"><img src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/IMG_6447.png" alt=""></div>
+            <div class="feed-tile feed-txt feed-navy">THE CITY<br>COMES IN<small>SOIE BOUTIQUE HOTEL</small></div>
+          </div></div>
+          <p class="feed-copy"><strong>Логика:</strong> визуальные паузы и типографика нужны не ради «дизайна сетки», а чтобы ритм профиля не превращался в сплошную стену фотографий. Композицию держим вертикальной и центрированной так, чтобы кадры сохранялись и в профиле, и в Reels-превью.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="motion" class="section">
+      <div class="section-number">09</div>
+      <div class="section-copy">
+        <p class="eyebrow">REELS / MOTION LANGUAGE</p>
+        <h2>Видео — это не экскурсия по номеру.<br><span>Это ощущение присутствия.</span></h2>
+        <div class="motion-grid">
+          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-4450041590053018789.mov"></video><span>MOTION REF · 01</span></div>
+          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/-5700102579430439523.mov"></video><span>MOTION REF · 02</span></div>
+          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/4289855894515363739.mov"></video><span>MOTION REF · 03</span></div>
+          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="https://raw.githubusercontent.com/garnemax-del/SO-E-hotel/main/70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video><span>MOTION REF · 04</span></div>
+        </div>
+        <div class="motion-rules">
+          <div class="motion-rule"><h3>Движение</h3><p>Смазанный проход, поворот головы, рука, ткань, дверь, отражение. Не всё должно быть идеально резким.</p></div>
+          <div class="motion-rule"><h3>Монтаж</h3><p>Не объясняем пространство линейно. Соединяем детали так, чтобы зритель сам достроил историю.</p></div>
+          <div class="motion-rule"><h3>Звук</h3><p>Дождь, шаги, ткань, чашка, лифт, улица, distant ferry. Саунд-дизайн может давать Стамбул без единого очевидного кадра.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ivory">
+      <div class="section-number">10</div>
+      <div class="section-copy">
+        <p class="eyebrow">ФИНАЛЬНЫЙ ФИЛЬТР</p>
+        <h2>Перед публикацией проверяем,<br><span>что кадр — SOIE.</span></h2>
+        <div class="rules-grid">
+          <div><span>01</span><h3>Есть ли причина остановиться?</h3><p>Если это просто «красивый номер», возможно, он нужен Booking, а не имиджевому слою Instagram.</p></div>
+          <div><span>02</span><h3>Интерьер остался правдивым?</h3><p>Не переставляем и не выдумываем пространство ради картинки.</p></div>
+          <div><span>03</span><h3>История — деталь, а не костюм?</h3><p>Если культурная ссылка считывается раньше героя или отеля — её уже слишком много.</p></div>
+          <div><span>04</span><h3>В кадре есть жизнь?</h3><p>Движение, жест, отражение, объект, странный crop или пауза должны создавать историю.</p></div>
+          <div><span>05</span><h3>Есть ли функция?</h3><p>Кадр либо создаёт желание, либо показывает продукт, либо повышает доверие. Лучше — делает две задачи сразу.</p></div>
+          <div><span>06</span><h3>Узнаётся ли SOIE без логотипа?</h3><p>Конечная цель — собственный визуальный язык, а не постоянная маркировка изображения.</p></div>
+        </div>
+        <div class="owner-note"><strong>Главное правило</strong>SOIE не должен выглядеть как «ещё один красивый исторический отель в Стамбуле». Он должен выглядеть как место с собственным визуальным характером, который невозможно перепутать с соседним объектом.</div>
+      </div>
+    </section>
+
+    <section class="final">
+      <p class="eyebrow gold">SOIE VISUAL BRAND BOOK · 2026</p>
+      <h2>Мы не продаём «ещё один красивый номер в Султанахмете».</h2>
+      <p>Мы создаём причину выбрать SOIE.</p>
+      <div class="final-line">INSTAGRAM → DESIRE &nbsp;&nbsp;·&nbsp;&nbsp; BOOKING → CONFIDENCE &nbsp;&nbsp;·&nbsp;&nbsp; SOIE → BOOKING</div>
+    </section>
+  </main>
+
+  <footer>
+    <span>SOIE Boutique Hotel · Visual Brand Book v2</span>
+    <span>Working direction · Russian</span>
+  </footer>
+
+  <script>
+    const buttons=document.querySelectorAll('.feed-tabs button');
+    const layouts=document.querySelectorAll('.feed-layout');
+    buttons.forEach(btn=>btn.addEventListener('click',()=>{
+      buttons.forEach(b=>b.classList.remove('active'));
+      layouts.forEach(l=>l.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('feed-'+btn.dataset.feed)?.classList.add('active');
+    }));
+  </script>
+</body>
+</html>
