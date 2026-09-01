@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07162f">
+<title>SOIE — Görsel Marka Kitabı</title>
+<link rel="alternate" hreflang="ru" href="./">
+<link rel="alternate" hreflang="tr" href="./tr.html">
+<style>
+:root{
+  --navy:#07162f;
+  --navy2:#0b2140;
+  --ivory:#f4efe7;
+  --paper:#fbf8f2;
+  --ink:#152238;
+  --muted:#736d66;
+  --gold:#c79a48;
+  --burg:#7d2632;
+  --line:rgba(7,22,47,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+img,video{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.serif{font-family:Georgia,"Times New Roman",serif}
+.wrap{width:min(1320px,calc(100% - 64px));margin:auto}
+.eyebrow{margin:0 0 18px;color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(48px,8vw,118px);line-height:.92;letter-spacing:-.045em}
+h2{font-size:clamp(40px,5vw,72px);line-height:1.02;letter-spacing:-.035em}
+h3{font-size:clamp(27px,3vw,44px);line-height:1.08}
+p{line-height:1.65}
+.lead{font-family:Georgia,"Times New Roman",serif;font-size:clamp(22px,2.4vw,34px);line-height:1.38}
+.small{font-size:14px;line-height:1.65;color:var(--muted)}
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(7,22,47,.97);color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12)
+}
+.header-inner{height:94px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:Georgia,"Times New Roman",serif;color:var(--gold);font-size:45px;letter-spacing:.12em}
+.version{font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.55)}
+nav{display:flex;gap:24px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.header-actions{display:flex;align-items:center;gap:16px}
+.lang-switch{display:flex;align-items:center;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:3px}
+.lang-switch a{min-width:38px;padding:7px 9px;border-radius:999px;text-align:center;font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.62);transition:.2s ease}
+.lang-switch a.active{background:var(--gold);color:var(--navy)}
+.lang-switch a:hover{color:#fff}
+.hero{position:relative;height:min(82vh,920px);min-height:620px;background:var(--navy);overflow:hidden}
+.hero video{position:absolute;inset:0;opacity:.55}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,22,47,.92) 0%,rgba(7,22,47,.55) 45%,rgba(7,22,47,.18) 100%)}
+.hero-copy{position:relative;z-index:2;color:#fff;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 70px;max-width:970px}
+.hero h1{margin-bottom:28px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{max-width:820px;color:rgba(255,255,255,.84);margin-bottom:0}
+section{padding:100px 0;border-bottom:1px solid var(--line)}
+.intro-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:90px;align-items:start}
+.statement{padding-left:26px;border-left:2px solid var(--gold)}
+.statement strong{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;display:block;margin-bottom:8px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:54px}
+.principle{background:var(--paper);padding:38px 34px;min-height:230px}
+.principle .n{color:var(--gold);font-size:11px;letter-spacing:.15em;margin-bottom:36px}
+.principle h3{font-size:34px;margin-bottom:14px}
+.principle p{margin:0;color:var(--muted);font-size:14px}
+.navy{background:var(--navy);color:#fff}
+.navy .small,.navy p{color:rgba(255,255,255,.7)}
+.navy .eyebrow{color:var(--gold)}
+.full-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--navy)}
+.media-card{position:relative;min-height:650px;background:#ddd;overflow:hidden}
+.media-card.tall{min-height:760px}
+.media-card.wide{grid-column:1/-1;min-height:650px}
+.media-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 26px;color:#fff;background:linear-gradient(transparent,rgba(4,13,30,.86));font-family:Georgia,"Times New Roman",serif;font-size:20px}
+.editorial{display:grid;grid-template-columns:.78fr 1.1fr 1.1fr;background:var(--navy);overflow:hidden}
+.editorial-copy{padding:58px 44px;display:flex;flex-direction:column;justify-content:center;color:#fff}
+.editorial-copy p{color:rgba(255,255,255,.72);font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.5}
+.editorial .media-card{min-height:720px;border-left:1px solid rgba(255,255,255,.12)}
+.editorial .media-cap{background:rgba(244,239,231,.95);color:var(--ink);font-size:17px}
+.character-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.character{background:var(--paper);padding:44px 34px}
+.character .label{font-size:11px;letter-spacing:.16em;color:var(--burg);margin-bottom:28px}
+.character h3{font-size:34px}
+.character p{font-size:14px;color:var(--muted);margin-bottom:0}
+.quote{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,4vw,52px);line-height:1.2;max-width:980px}
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:46px}
+.ba-card{border:1px solid var(--line);background:#fff}
+.ba-label{padding:15px 20px;background:var(--navy);color:var(--gold);font-family:Georgia,"Times New Roman",serif;font-size:18px}
+.ba-media{height:520px}
+.ba-copy{padding:24px 26px;font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.45}
+.motion-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.motion{background:#020916;min-height:620px;position:relative;overflow:hidden}
+.motion video{position:absolute;inset:0}
+.motion-copy{position:absolute;inset:auto 0 0;padding:80px 28px 28px;color:white;background:linear-gradient(transparent,rgba(4,13,30,.9))}
+.motion-copy b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:400}
+.motion-copy p{font-size:13px;color:rgba(255,255,255,.72);margin:8px 0 0}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:330px;gap:2px;background:var(--navy)}
+.gallery figure{margin:0;position:relative;overflow:hidden}
+.gallery figure:first-child{grid-row:span 2}
+.gallery figure:nth-child(4){grid-column:2/4}
+.gallery figcaption{position:absolute;left:18px;bottom:18px;color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 2px 15px #000}
+.final{background:var(--navy);color:#fff;padding:110px 0}
+.final h2{max-width:1000px}
+.final .lead{max-width:850px;color:rgba(255,255,255,.78)}
+.rule-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.12);margin-top:54px}
+.rule{padding:26px 0;background:var(--navy);border-top:1px solid rgba(255,255,255,.15);font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.rule:nth-child(odd){padding-right:40px}
+.rule:nth-child(even){padding-left:40px}
+footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:11px;letter-spacing:.08em}
+@media(max-width:900px){
+  .wrap{width:min(100% - 36px,1320px)}
+  nav{display:none}.header-inner{height:78px}.logo{font-size:36px}
+  .version{display:none}.header-actions{gap:0}
+  .hero{height:72vh;min-height:560px}.hero-copy{padding-bottom:46px}
+  section{padding:72px 0}
+  .intro-grid,.editorial,.character-grid,.before-after,.motion-grid{grid-template-columns:1fr}
+  .three{grid-template-columns:1fr}
+  .editorial-copy{padding:42px 28px}.editorial .media-card{min-height:0;aspect-ratio:3/4}
+  .full-grid{grid-template-columns:1fr}.media-card,.media-card.tall,.media-card.wide{min-height:0;aspect-ratio:4/5}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:280px}.gallery figure:first-child{grid-row:span 2}.gallery figure:nth-child(4){grid-column:1/-1}
+  .motion{min-height:0;aspect-ratio:9/16}
+  .rule-list{grid-template-columns:1fr}.rule,.rule:nth-child(odd),.rule:nth-child(even){padding:22px 0}
+}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 28px)}
+  h1{font-size:53px}.lead{font-size:22px}
+  .hero{min-height:520px}
+  .principle{min-height:0;padding:30px 24px}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:auto;gap:12px;background:transparent}
+  .gallery figure,.gallery figure:first-child,.gallery figure:nth-child(4){grid-column:auto;grid-row:auto;aspect-ratio:4/5}
+  .before-after{gap:18px}.ba-media{height:auto;aspect-ratio:4/3}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap header-inner">
+    <div class="logo">SOIE</div>
+    <nav>
+      <a href="#strategy">Strateji</a>
+      <a href="#visual">Görsel Dil</a>
+      <a href="#characters">Karakterler</a>
+      <a href="#motion">Motion</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" aria-label="Language switcher">
+        <a href="./" lang="ru">RU</a>
+        <a class="active" href="./tr.html" lang="tr" aria-current="page">TR</a>
+      </div>
+      <div class="version">VISUAL BRAND BOOK · NEW BUILD</div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <video autoplay muted loop playsinline preload="metadata" src="./70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video>
+  <div class="wrap hero-copy">
+    <p class="eyebrow">SOIE · ISTANBUL</p>
+    <h1>Şehrin hafızasını taşıyan<br><em>modern bir butik otel.</em></h1>
+    <p class="lead">Instagram’ın görevi yalnızca odayı göstermek değil, SOIE yaşam tarzına âşık etmektir. Sadece mekânı değil, o mekânın içinde yaşanan hikâyeyi gösteriyoruz.</p>
+  </div>
+</section>
+
+<section id="strategy">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">01 · KONUMLANDIRMA</p>
+        <h2>Ne “tarihi otel”.<br>Ne de “sultanlar İstanbul’u”.</h2>
+        <p class="lead">SOIE çağdaş bir marka. Şehrin tarihi detaylarda, malzemelerde, mimaride ve ritimde hissedilir; fakat bunu kostümlü bir anlatıya dönüştürmeyiz.</p>
+      </div>
+      <div class="statement">
+        <strong>Ana hedef</strong>
+        <p>Bir başka “güzel otel hesabı” yaratmak değil; SOIE’yi logosu görünmese bile tanınır kılan özgün bir görsel dil oluşturmak.</p>
+      </div>
+    </div>
+
+    <div class="three">
+      <article class="principle">
+        <div class="n">01</div>
+        <h3>Booking</h3>
+        <p>Odayı seçmek için. Kullanıcı mekânı, oda kategorisini ve detayları net biçimde anlamalı ve rezervasyon kararını rahatça verebilmelidir.</p>
+      </article>
+      <article class="principle">
+        <div class="n">02</div>
+        <h3>Instagram</h3>
+        <p>SOIE yaşam tarzına âşık olmak için. Burada metrekareyi ya da yatağı değil, “ben bu karenin içinde olmak istiyorum” hissini satıyoruz.</p>
+      </article>
+      <article class="principle">
+        <div class="n">03</div>
+        <h3>Trendlerin peşinden gitmiyoruz</h3>
+        <p>Kendi görsel dilimizi yaratıyoruz. Trendler bir araç olabilir; fakat hiçbir zaman bir kare üretmenin nedeni olamaz.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="memory">
+  <div class="wrap">
+    <p class="eyebrow">02 · ŞEHRİN HAFIZASI</p>
+    <h2>Çağdaş İstanbul.<br>Geçmişin hafızası detaylarda.</h2>
+    <p class="lead">“Sultanahmet’te bir güzel oda daha” satmıyoruz. SOIE’yi seçmek için bir neden yaratıyoruz. Tarih dekorasyona dönüşmemeli; malzemede, renkte, desende, seste, bir harekette ya da şehrin tek bir tanıdık simgesinde sessizce hissedilmelidir.</p>
+    <div class="three">
+      <article class="principle">
+        <div class="n">DESEN</div>
+        <h3>Kostümü değil, prensibi alıyoruz</h3>
+        <p>Bir referansta bizi etkileyen şey desen ise onu birebir kopyalamıyoruz. Ritmi, geometrisini ve dokusunu alıp çağdaş bir İstanbul görsel diline çeviriyoruz.</p>
+      </article>
+      <article class="principle">
+        <div class="n">ŞEHİR</div>
+        <h3>Kartpostal klişesi olmadan İstanbul</h3>
+        <p>Tek ve doğru bir işaret, klişeler toplamından daha güçlüdür: pencereden gelen ışık, simit, sokak sesi, bir cephe parçası, yansıma, su ya da şehre ait kısa bir detay.</p>
+      </article>
+      <article class="principle">
+        <div class="n">KARE</div>
+        <h3>Tek detay — tek mesaj</h3>
+        <p>Kareyi “Türk” sembolleriyle doldurmuyoruz. Her karenin tek bir görevi var: arzu yaratmak, ürünü göstermek ya da SOIE’ye duyulan güveni güçlendirmek.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visual" class="navy">
+  <div class="wrap">
+    <p class="eyebrow">03 · GERÇEK SOIE</p>
+    <h2>Mekânı değiştirmiyoruz.<br>İçinde olanı değiştiriyoruz.</h2>
+    <p class="lead">Repo’daki fotoğrafları orijinal kalitesinde kullanıyoruz. Sıkıştırılmış önizleme, base64 proxy ya da gri placeholder yok.</p>
+
+    <div class="gallery">
+      <figure><img src="./IMG_6443.png" alt="SOIE — orijinal repo görseli"><figcaption>SOIE · original hotel material</figcaption></figure>
+      <figure><img src="./IMG_6447.png" alt="SOIE — orijinal repo görseli"><figcaption>SOIE · original hotel material</figcaption></figure>
+      <figure><img src="./IMG_6478.png" alt="SOIE — orijinal repo görseli"><figcaption>SOIE · original hotel material</figcaption></figure>
+      <figure><img src="./IMG_6597.png" alt="SOIE — orijinal repo görseli"><figcaption>SOIE · original hotel material</figcaption></figure>
+      <figure><img src="./IMG_6856.png" alt="SOIE — Ortaköy ve SOIE logolu TV ekranı"><figcaption>SOIE · Ortaköy / welcome screen</figcaption></figure>
+      <figure><img src="./IMG_6808.png" alt="SOIE Kids — merdivende çocuklar"><figcaption>SOIE KIDS · merdiven / hareket</figcaption></figure>
+      <figure><img src="./IMG_6807.png" alt="SOIE Kids — banyoda çocuklar"><figcaption>SOIE KIDS · ayna / detay</figcaption></figure>
+      <figure><img src="./IMG_6803.png" alt="SOIE Kids — koridorda çocuklar"><figcaption>SOIE KIDS · yürüyüş / karakter</figcaption></figure>
+      <figure><img src="./IMG_6802.webp" alt="SOIE — boş koridor"><figcaption>KATALOG · koridor</figcaption></figure>
+      <figure><img src="./IMG_6804.webp" alt="SOIE — boş banyo"><figcaption>KATALOG · banyo</figcaption></figure>
+      <figure><img src="./IMG_6780.png" alt="SOIE — ek orijinal görsel"><figcaption>SOIE · original visual</figcaption></figure>
+      <figure><img src="./IMG_6781.webp" alt="SOIE — ek orijinal görsel"><figcaption>SOIE · original interior</figcaption></figure>
+      <figure><img src="./IMG_6782.webp" alt="SOIE — ek orijinal görsel"><figcaption>SOIE · original interior</figcaption></figure>
+      <figure><img src="./IMG_6793.png" alt="SOIE Woman — odada sabah"><figcaption>SOIE WOMAN · morning</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="characters">
+  <div class="wrap">
+    <p class="eyebrow">04 · SOIE KARAKTERLERİ</p>
+    <h2>Her karakterin kendi tavrı var.<br>Ama hepsi aynı dünyanın içinde yaşıyor.</h2>
+    <p class="lead">Rastgele “otelde insanlar” istemiyoruz. Her karakter belirli bir senaryoya hizmet etmeli ve SOIE’nin karakterini devam ettirmeli.</p>
+
+    <div class="character-grid">
+      <article class="character">
+        <div class="label">SOIE WOMAN</div>
+        <h3>Kendi yolculuğunun kahramanı</h3>
+        <p>“Güzel bir otelde güzel bir kadın” değil. Sabah, bornoz, hareket, hazırlanma, bavul, şehirden dönüş. Jestler ve çağdaş styling sayesinde oda onun yolculuğunun bir parçasına dönüşür.</p>
+      </article>
+      <article class="character">
+        <div class="label">SOIE MAN</div>
+        <h3>Çağdaş şehir ritmi</h3>
+        <p>Otel kataloğundan çıkmış bir iş insanı değil. Sakin, kendinden emin, çağdaş bir karakter. Mekân ne kadar tarihiyse kıyafet, beden dili ve davranış o kadar güncel olmalı.</p>
+      </article>
+      <article class="character">
+        <div class="label">SOIE KIDS</div>
+        <h3>Family klişesi olmadan stil</h3>
+        <p>“Otelde sevimli çocuklar” değil. Biraz fashion, biraz ironi, tek bir kültürel detay ve karakter. Aile içeriği de markanın estetik dünyasının parçası kalır.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="navy">
+  <div class="wrap">
+    <div class="editorial">
+      <div class="editorial-copy">
+        <p class="eyebrow">SOIE WOMAN</p>
+        <h3>Önce hikâye.<br>Sonra kare.</h3>
+        <p>Kahramanı yalnızca güzel bir fotoğraf için odanın ortasına yerleştirmiyoruz. Bir an yaratıyoruz: yeni uyanmış, hazırlanıyor, yeni gelmiş ya da şehirden dönmüş. Kamera sanki onu kendi hayatının içinde yakalamış gibi davranıyor.</p>
+      </div>
+      <div class="media-card"><img src="./IMG_6793.png" alt="SOIE Woman — odada sabah"><div class="media-cap">SOIE’de sabah — aynı oda, ama artık içinde hayat var.</div></div>
+      <div class="media-card"><img src="./IMG_6780.png" alt="SOIE Woman — ikinci lifestyle senaryosu"><div class="media-cap">İkinci senaryo — mekânda verilmiş bir poz değil, SOIE’nin içinde yaşanan bir an.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="navy">
+  <div class="wrap">
+    <p class="eyebrow">05 · SOIE KIDS</p>
+    <h2>Aile içeriği de stil sahibi olabilir.</h2>
+    <p class="lead">Bu sıradan bir family çekimi değil. Çocukları markanın estetiğinin parçası olarak gösteriyoruz: biraz fashion, biraz ironi, kültürel bir detay ve karakter.</p>
+    <div class="full-grid">
+      <div class="media-card tall"><img src="./IMG_6808.png" alt="SOIE Kids — merdiven"><div class="media-cap">Merdiven / hareket. Kare standart bir otel aile fotoğrafı değil, fashion sahnesi gibi çalışıyor.</div></div>
+      <div class="media-card tall"><img src="./IMG_6807.png" alt="SOIE Kids — ayna"><div class="media-cap">Ayna / detay. Mekân tanınır kalıyor, fakat sahne karakter kazanıyor.</div></div>
+      <div class="media-card wide"><img src="./IMG_6803.png" alt="SOIE Kids — yürüyüş"><div class="media-cap">Yürüyüş / karakter. Çocuklar SOIE dünyasının gerçek karakterleri gibi görünür.</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">06 · SOIE MAN</p>
+    <h2>SOIE MAN — çağdaş bir karakter;<br>otel kataloğundaki erkek değil.</h2>
+    <div class="intro-grid">
+      <div>
+        <p class="lead">SOIE’nin erkek karakteri sakin, çağdaş ve şehirli. Mekân ne kadar tarihiyse kıyafet, beden dili ve davranış o kadar güncel olmalı. Onu “İstanbul gibi” stilize etmiyoruz; şehir mekân ve detaylar üzerinden okunuyor.</p>
+      </div>
+      <div class="statement">
+        <strong>Tüm karakterler için kural</strong>
+        <p>Kurulmuş bir luxury pozu yok. Karakter her zaman bir şey yapıyor: yürüyor, bekliyor, hazırlanıyor, pencereden bakıyor, bir detayı fark ediyor. Böylece odanın önünde poz vermek yerine SOIE’nin içinde gerçekten var oluyor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="navy">
+  <div class="wrap">
+    <p class="eyebrow">07 · ÖNCE / SONRA</p>
+    <h2>Mekân aynı kalıyor.<br>Anlatım değişiyor.</h2>
+    <p class="lead">Katalog karesi gerekli ve kalıyor. Fakat Instagram’da yanına insan, hareket ve senaryo ekleniyor; mekân böylece duygusal olarak çalışmaya başlıyor.</p>
+
+    <div class="before-after">
+      <div class="ba-card">
+        <div class="ba-label">ÖNCE · boş koridor</div>
+        <div class="ba-media"><img src="./IMG_6802.webp" alt="Karakterler olmadan SOIE koridoru"></div>
+        <div class="ba-copy">Mekân bir gerçeklik olarak görünür: iç mekânı anlarız ama henüz orada yaşanan hikâyeyi hissetmeyiz.</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-label">SONRA · otelin içindeki hikâye</div>
+        <div class="ba-media"><img src="./IMG_6803.png" alt="Koridorda SOIE Kids"></div>
+        <div class="ba-copy">Aynı koridor; fakat karakterler ve hareket onu bakmak isteyeceğiniz bir sahneye dönüştürüyor.</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-label">ÖNCE · ürün olarak banyo</div>
+        <div class="ba-media"><img src="./IMG_6804.webp" alt="Karakterler olmadan SOIE banyosu"></div>
+        <div class="ba-copy">Katalog karesi Booking için gereklidir: mekânı ve detayları dürüstçe gösterir.</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-label">SONRA · hikâyenin parçası olarak banyo</div>
+        <div class="ba-media"><img src="./IMG_6807.png" alt="Banyoda SOIE Kids"></div>
+        <div class="ba-copy">Instagram’da bu artık “işte banyomuz” değil, SOIE’nin içinde yaşanan canlı bir ana dönüşür.</div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<section id="motion">
+  <div class="wrap">
+    <p class="eyebrow">08 · REELS / MOTION</p>
+    <h2>Video hayat gibi hissettirmeli;<br>otel reklamı gibi değil.</h2>
+    <p class="lead">Repo’daki tüm videoları tek bir sistemin parçası olarak kullanıyoruz: hareket, duraklama, yakın detay, yürüyüş ve beklenmedik açı. Trend uğruna hızlı ve anlamsız kurgu yok.</p>
+
+    <div class="motion-grid">
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./-4450041590053018789.mov"></video>
+        <div class="motion-copy"><b>Hareket</b><p>Kamera bir kontrol listesine göre mekânı göstermiyor; anın peşinden gidiyor.</p></div>
+      </article>
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./-5700102579430439523.mov"></video>
+        <div class="motion-copy"><b>Yakınlık</b><p>Doku, eller, kumaş, yansıma, kısa bir detay — yeniden bakma isteği yaratan şeyler.</p></div>
+      </article>
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./4289855894515363739.mov"></video>
+        <div class="motion-copy"><b>Ritim</b><p>İnsan, mekân ve şehri dönüşümlü kullanıyoruz. Profili arka arkaya oda fotoğraflarına çevirmiyoruz.</p></div>
+      </article>
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video>
+        <div class="motion-copy"><b>Atmosfer</b><p>Kare, metin ve logo olmasa bile SOIE hissini bırakmalı.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">09 · INSTAGRAM’I NASIL KURUYORUZ</p>
+    <h2>Tek bir iyi kare değil.<br>Güçlü bir görsel sistem.</h2>
+    <p class="quote">Kadın, erkek, çocuklar, geliş, sabah, hareket, detaylar, oda ve şehir — hepsi aynı hikâyenin bölümleri gibi görünmeli.</p>
+    <div class="three">
+      <article class="principle"><div class="n">КАДР</div><h3>Durmak için bir neden var</h3><p>Beklenmedik bir jest, hareket, yansıma, kumaş, karakter ya da kültürel bir detay.</p></article>
+      <article class="principle"><div class="n">SERİ</div><h3>Kareler birbiriyle konuşur</h3><p>Çekim seriler halinde kurgulanır; böylece aynı senaryo odada, koridorda, şehirde ve videoda devam eder.</p></article>
+      <article class="principle"><div class="n">MARKA</div><h3>SOIE imzasız da tanınır</h3><p>Hedef tam olarak budur: güncel Instagram trendleri toplamı değil, markaya ait özgün bir görsel dil.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow">10 · SON FİLTRE</p>
+    <h2>Yayınlamadan önce tek bir soru soruyoruz:<br>bunu herhangi bir güzel otel çekebilir miydi, yoksa yalnızca SOIE mi?</h2>
+    <p class="lead">Bir kareyi hiçbir şeyi değiştirmeden herhangi bir butik otelin Instagram’ına koyabiliyorsak, o kareye ihtiyacımız yok.</p>
+    <div class="rule-list">
+      <div class="rule">Booking — odayı seçmek için.</div>
+      <div class="rule">Instagram — SOIE’nin içinde yaşamak istemek için.</div>
+      <div class="rule">Şehrin tarihini kostümle değil, detaylarla gösteriyoruz.</div>
+      <div class="rule">Trendlerin peşinden koşmuyoruz — kendi görsel dilimizi kuruyoruz.</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">SOIE · VISUAL BRAND BOOK · ISTANBUL</div></footer>
+</body>
+</html>
