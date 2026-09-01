@@ -107,6 +107,31 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
 .rule{padding:26px 0;background:var(--navy);border-top:1px solid rgba(255,255,255,.15);font-family:Georgia,"Times New Roman",serif;font-size:22px}
 .rule:nth-child(odd){padding-right:40px}
 .rule:nth-child(even){padding-left:40px}
+
+.feed-tabs{display:flex;gap:8px;margin:36px 0 28px;overflow-x:auto;padding-bottom:4px}
+.feed-tabs button{background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;padding:11px 17px;font:inherit;font-size:11px;letter-spacing:.06em;cursor:pointer;white-space:nowrap}
+.feed-tabs button.active{background:var(--gold);border-color:var(--gold);color:var(--navy);font-weight:700}
+.feed-layout{display:none;grid-template-columns:minmax(420px,700px) 1fr;gap:46px;align-items:center}
+.feed-layout.active{display:grid}
+.insta-frame{background:#fff;padding:5px;box-shadow:0 18px 60px rgba(0,0,0,.22)}
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:#fff}
+.insta-grid img{aspect-ratio:3/4;width:100%;height:auto;object-fit:cover;display:block}
+.feed-explain{border-left:1px solid rgba(255,255,255,.2);padding-left:30px;color:rgba(255,255,255,.68)}
+.feed-explain h3{font-size:clamp(31px,3.2vw,46px);color:#fff;margin-bottom:20px}
+.feed-explain p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:0}
+.feed-explain strong{color:#fff}
+.feed-explain.recommended{border-left-color:var(--gold)}
+.recommend-pill{display:inline-block;margin-top:24px;color:var(--gold);border:1px solid rgba(199,154,72,.46);padding:8px 11px;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
+@media(max-width:900px){
+  .feed-layout{grid-template-columns:1fr;gap:30px}
+  .feed-explain{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:28px 0 0}
+}
+@media(max-width:560px){
+  .feed-tabs{margin-top:28px}
+  .feed-tabs button{padding:10px 13px}
+  .insta-grid{gap:3px}.insta-frame{padding:3px}
+}
+
 footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:11px;letter-spacing:.08em}
 @media(max-width:900px){
   .wrap{width:min(100% - 36px,1320px)}
@@ -142,6 +167,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
       <a href="#visual">Görsel Dil</a>
       <a href="#characters">Karakterler</a>
       <a href="#motion">Motion</a>
+      <a href="#feed">Instagram</a>
     </nav>
     <div class="header-actions">
       <div class="lang-switch" aria-label="Language switcher">
@@ -380,16 +406,90 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
     <h2>Tek bir iyi kare değil.<br>Güçlü bir görsel sistem.</h2>
     <p class="quote">Kadın, erkek, çocuklar, geliş, sabah, hareket, detaylar, oda ve şehir — hepsi aynı hikâyenin bölümleri gibi görünmeli.</p>
     <div class="three">
-      <article class="principle"><div class="n">КАДР</div><h3>Durmak için bir neden var</h3><p>Beklenmedik bir jest, hareket, yansıma, kumaş, karakter ya da kültürel bir detay.</p></article>
+      <article class="principle"><div class="n">KARE</div><h3>Durmak için bir neden var</h3><p>Beklenmedik bir jest, hareket, yansıma, kumaş, karakter ya da kültürel bir detay.</p></article>
       <article class="principle"><div class="n">SERİ</div><h3>Kareler birbiriyle konuşur</h3><p>Çekim seriler halinde kurgulanır; böylece aynı senaryo odada, koridorda, şehirde ve videoda devam eder.</p></article>
       <article class="principle"><div class="n">MARKA</div><h3>SOIE imzasız da tanınır</h3><p>Hedef tam olarak budur: güncel Instagram trendleri toplamı değil, markaya ait özgün bir görsel dil.</p></article>
     </div>
   </div>
 </section>
 
+<section id="feed" class="navy">
+  <div class="wrap">
+    <p class="eyebrow">10 · INSTAGRAM NASIL GÖRÜNEBİLİR</p>
+    <h2>Üç farklı cesaret seviyesi.<br>Tek bir önerilen denge.</h2>
+
+    <div class="feed-tabs" role="tablist" aria-label="Instagram grid seçenekleri">
+      <button class="active" type="button" data-feed="safe" role="tab" aria-selected="true">1 · Sakin</button>
+      <button type="button" data-feed="balanced" role="tab" aria-selected="false">2 · Önerilen</button>
+      <button type="button" data-feed="fashion" role="tab" aria-selected="false">3 · Fashion</button>
+    </div>
+
+    <div class="feed-layout active" id="feed-safe" data-feed-layout>
+      <div class="insta-frame">
+        <div class="insta-grid">
+          <img src="./IMG_6478.png" alt="SOIE iç mekân">
+          <img src="./IMG_6804.webp" alt="SOIE banyo">
+          <img src="./IMG_6597.png" alt="SOIE iç mekân detayı">
+          <img src="./IMG_6793.png" alt="SOIE Woman">
+          <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
+          <img src="./IMG_6802.webp" alt="SOIE koridor">
+          <img src="./IMG_6781.webp" alt="SOIE iç mekân">
+          <img src="./IMG_6808.png" alt="SOIE Kids">
+          <img src="./IMG_6782.webp" alt="SOIE iç mekân">
+        </div>
+      </div>
+      <div class="feed-explain">
+        <h3>%70 ürün / %30 karakter</h3>
+        <p><strong>Artı:</strong> ne sattığımız son derece net.<br><br><strong>Risk:</strong> iyi boutique hotel hesaplarından belirgin biçimde ayrışmak daha zor.<br><br><strong>Ne zaman kullanılmalı:</strong> katalog görünümünden marka diline en kontrollü geçiş gerekiyorsa.</p>
+      </div>
+    </div>
+
+    <div class="feed-layout" id="feed-balanced" data-feed-layout>
+      <div class="insta-frame">
+        <div class="insta-grid">
+          <img src="./IMG_6793.png" alt="SOIE Woman">
+          <img src="./IMG_6478.png" alt="SOIE iç mekân">
+          <img src="./IMG_6808.png" alt="SOIE Kids">
+          <img src="./IMG_6804.webp" alt="SOIE banyo">
+          <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
+          <img src="./IMG_6803.png" alt="SOIE Kids koridor">
+          <img src="./IMG_6781.webp" alt="SOIE iç mekân">
+          <img src="./IMG_6780.png" alt="SOIE lifestyle">
+          <img src="./IMG_6597.png" alt="SOIE iç mekân detayı">
+        </div>
+      </div>
+      <div class="feed-explain recommended">
+        <h3>%60 ürün / %40 karakter</h3>
+        <p><strong>Neden bunu öneriyorum:</strong> kullanıcı oteli hâlâ çok net anlıyor, fakat profil artık Booking ile karıştırılmıyor. İmaj kareleri arzu yaratıyor, gerçek mekânlar güveni koruyor.</p>
+        <div class="recommend-pill">LANSMAN İÇİN BENİM SEÇİMİM</div>
+      </div>
+    </div>
+
+    <div class="feed-layout" id="feed-fashion" data-feed-layout>
+      <div class="insta-frame">
+        <div class="insta-grid">
+          <img src="./IMG_6808.png" alt="SOIE Kids">
+          <img src="./IMG_6793.png" alt="SOIE Woman">
+          <img src="./IMG_6807.png" alt="SOIE Kids">
+          <img src="./IMG_6780.png" alt="SOIE lifestyle">
+          <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
+          <img src="./IMG_6803.png" alt="SOIE Kids koridor">
+          <img src="./IMG_6478.png" alt="SOIE iç mekân">
+          <img src="./IMG_6597.png" alt="SOIE iç mekân detayı">
+          <img src="./IMG_6804.webp" alt="SOIE banyo">
+        </div>
+      </div>
+      <div class="feed-explain">
+        <h3>%50 ürün / %50 imaj</h3>
+        <p><strong>Artı:</strong> en güçlü marka etkisi.<br><br><strong>Risk:</strong> sıkı bir art direction olmadan profil otel yerine güzel fotoğrafları satmaya başlayabilir.<br><br><strong>Ne zaman kullanılmalı:</strong> SOIE için temel marka tanınırlığı oluştuktan sonra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="final">
   <div class="wrap">
-    <p class="eyebrow">10 · SON FİLTRE</p>
+    <p class="eyebrow">11 · SON FİLTRE</p>
     <h2>Yayınlamadan önce tek bir soru soruyoruz:<br>bunu herhangi bir güzel otel çekebilir miydi, yoksa yalnızca SOIE mi?</h2>
     <p class="lead">Bir kareyi hiçbir şeyi değiştirmeden herhangi bir butik otelin Instagram’ına koyabiliyorsak, o kareye ihtiyacımız yok.</p>
     <div class="rule-list">
@@ -403,5 +503,20 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
 </main>
 
 <footer><div class="wrap">SOIE · VISUAL BRAND BOOK · ISTANBUL</div></footer>
+
+<script>
+document.querySelectorAll('.feed-tabs').forEach(tabset=>{
+  const section=tabset.closest('#feed');
+  const buttons=[...tabset.querySelectorAll('button[data-feed]')];
+  const layouts=[...section.querySelectorAll('[data-feed-layout]')];
+  buttons.forEach(btn=>btn.addEventListener('click',()=>{
+    buttons.forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});
+    layouts.forEach(l=>l.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+    section.querySelector('#feed-'+btn.dataset.feed)?.classList.add('active');
+  }));
+});
+</script>
 </body>
 </html>
