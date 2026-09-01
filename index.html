@@ -110,6 +110,24 @@
     .character-example.alt .character-example-copy .char-tag{color:var(--burgundy)}
     .character-example.alt .character-example-copy p{color:var(--muted)}
     .character-example.alt .character-example-copy b{color:var(--ink)}
+    .kids-story{margin:34px 0 22px;padding:38px;background:#fff;border:1px solid var(--line)}
+    .kids-story-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:34px;align-items:end;margin-bottom:28px}
+    .kids-story-head h3{font-family:"Bodoni Moda",serif;font-size:40px;line-height:1.08;font-weight:400;margin:0}
+    .kids-story-head p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.45;color:var(--muted);margin:0}
+    .compare-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+    .compare-frame{position:relative;overflow:hidden;background:#ddd;min-height:360px}
+    .compare-frame img{width:100%;height:100%;min-height:360px;object-fit:cover}
+    .compare-label{position:absolute;left:12px;top:12px;z-index:2;background:rgba(0,10,36,.88);color:#fff;padding:7px 9px;font-size:9px;letter-spacing:.12em}
+    .compare-copy{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 24px}
+    .compare-copy p{margin:0;padding:15px 16px;background:var(--ivory);font-size:13px;color:var(--muted)}
+    .kids-final{display:grid;grid-template-columns:1.15fr .85fr;gap:0;margin-top:18px;background:var(--navy);color:#fff;overflow:hidden}
+    .kids-final-media{min-height:500px;background:#ddd}
+    .kids-final-media img{width:100%;height:100%;min-height:500px;object-fit:cover}
+    .kids-final-copy{padding:42px;align-self:center}
+    .kids-final-copy h3{font-family:"Bodoni Moda",serif;font-size:36px;line-height:1.08;font-weight:400;margin:0 0 16px}
+    .kids-final-copy p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.45;color:rgba(255,255,255,.75);margin:0}
+    .kids-final-copy b{display:block;margin-top:20px;font-size:12px;line-height:1.6;color:#fff}
+
     .identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:48px}
     .palette{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
     .swatch{aspect-ratio:1/1;display:flex;align-items:flex-end;padding:15px;font-size:10px;letter-spacing:.08em}
@@ -271,7 +289,7 @@
           <div class="visual-card"><img src="./IMG_6443.png" alt="SOIE visual 01"></div>
           <div class="visual-card"><img src="./IMG_6447.png" alt="SOIE visual 02"></div>
           <div class="visual-card"><img src="./IMG_6478.png" alt="SOIE visual 03"></div>
-          <div class="visual-card"><img src="./IMG_6520.png" data-soie-tv alt="SOIE visual 04"></div>
+          <div class="visual-card"><img src="./IMG_6520.png" data-live-image="tv_soie" alt="SOIE visual 04"></div>
           <div class="visual-card"><img src="./IMG_6597.png" alt="SOIE visual 05"></div>
         </div>
         <p class="visual-note">Не переставляем мебель и не выдумываем другой отель. Чтобы кадр захотелось разглядывать, добавляем жизнь: движение, человека, отражение, жест, ткань, неожиданный ракурс или одну культурную деталь.</p>
@@ -317,7 +335,7 @@
 
         <div class="character-example">
           <div class="character-example-media">
-            <img id="soie-woman-example" src="./IMG_6443.png" alt="SOIE woman — пример lifestyle-кадра" loading="lazy">
+            <img id="soie-woman-example" src="./IMG_6443.png" data-live-image="woman_morning" alt="SOIE woman — утро в отеле" loading="lazy">
           </div>
           <div class="character-example-copy">
             <div class="char-tag">ПРИМЕР · УТРО В SOIE</div>
@@ -329,13 +347,66 @@
 
         <div class="character-example alt">
           <div class="character-example-media">
-            <img id="soie-suitcase-example" src="./IMG_6447.png" alt="SOIE woman — приезд и чемодан" loading="lazy">
+            <img id="soie-suitcase-example" src="./IMG_6447.png" data-live-image="woman_arrival" alt="SOIE woman — приезд и чемодан" loading="lazy">
           </div>
           <div class="character-example-copy">
             <div class="char-tag">ПРИМЕР · ПРИЕЗД / СБОРЫ</div>
             <h3>Отель становится частью самой поездки.</h3>
             <p>Чемодан — простой предмет, но он сразу создаёт историю. Героиня только приехала или собирается выйти в город. Мы показываем не мебель по отдельности, а реальный момент проживания.</p>
             <b>Так человек узнаёт в кадре себя: приехал, открыл чемодан, переоделся — и Стамбул уже начался.</b>
+          </div>
+        </div>
+
+
+        <div class="kids-story">
+          <div class="kids-story-head">
+            <div>
+              <div class="char-tag">SOIE KIDS · ПРИМЕРЫ</div>
+              <h3>Детский сюжет — без банальной family-рекламы.</h3>
+            </div>
+            <p>Я сохраняю реальное пространство SOIE и показываю, как меняется восприятие кадра, когда в нём появляется герой. Мы не декорируем интерьер заново: добавляем ребёнка, одежду, движение и одну культурную деталь.</p>
+          </div>
+
+          <div class="compare-pair">
+            <div class="compare-frame">
+              <span class="compare-label">REAL SPACE · КОРИДОР</span>
+              <img src="./IMG_6478.png" data-live-image="empty_corr" alt="SOIE corridor — real space" loading="lazy">
+            </div>
+            <div class="compare-frame">
+              <span class="compare-label">EDITORIAL LAYER · SOIE KIDS</span>
+              <img src="./IMG_6478.png" data-live-image="kids_corr" alt="SOIE kids — corridor editorial" loading="lazy">
+            </div>
+          </div>
+          <div class="compare-copy">
+            <p><strong>Почему беру этот интерьер:</strong> геометрия коридора уже даёт сильную архитектурную основу. Нам не нужно добавлять декор.</p>
+            <p><strong>Что меняю:</strong> ребёнок и fashion-пластика создают историю. Сам отель остаётся узнаваемым и правдивым.</p>
+          </div>
+
+          <div class="compare-pair">
+            <div class="compare-frame">
+              <span class="compare-label">REAL SPACE · ВАННАЯ</span>
+              <img src="./IMG_6597.png" data-live-image="empty_bath" alt="SOIE bathroom — real space" loading="lazy">
+            </div>
+            <div class="compare-frame">
+              <span class="compare-label">EDITORIAL LAYER · SOIE KIDS</span>
+              <img src="./IMG_6597.png" data-live-image="kids_bath" alt="SOIE kids — bathroom editorial" loading="lazy">
+            </div>
+          </div>
+          <div class="compare-copy">
+            <p><strong>Почему это работает для продукта:</strong> ванная и материалы по-прежнему хорошо считываются — кадр не перестаёт показывать сам отель.</p>
+            <p><strong>Почему это работает для Instagram:</strong> появляется неожиданный герой, поэтому фотография уже выглядит как editorial, а не как карточка номера.</p>
+          </div>
+
+          <div class="kids-final">
+            <div class="kids-final-media">
+              <img src="./IMG_6447.png" data-live-image="kids_stairs" alt="SOIE kids — stairs editorial" loading="lazy">
+            </div>
+            <div class="kids-final-copy">
+              <div class="char-tag">ЛЕСТНИЦА · ФИНАЛЬНЫЙ КАДР</div>
+              <h3>Историческая архитектура + абсолютно современный герой.</h3>
+              <p>Здесь сама лестница уже даёт память города. Поэтому ребёнка, одежду и позу я делаю максимально современными. Контраст и создаёт нужный SOIE-эффект.</p>
+              <b>Мы не изображаем «ребёнка в историческом отеле». Мы показываем современную семью, которая органично живёт внутри Стамбула.</b>
+            </div>
           </div>
         </div>
 
@@ -413,7 +484,7 @@
             <div class="feed-tile"><img src="./IMG_6447.png" alt=""></div>
             <div class="feed-tile feed-txt feed-burg">MODERN<br>ISTANBUL<small>NO COSTUME</small></div>
             <div class="feed-tile"><video muted autoplay loop playsinline src="./-5700102579430439523.mov"></video></div>
-            <div class="feed-tile"><img src="./IMG_6520.png" data-soie-tv alt=""></div>
+            <div class="feed-tile"><img src="./IMG_6520.png" data-live-image="tv_soie" alt=""></div>
           </div></div>
           <p class="feed-copy"><strong>Логика:</strong> сначала желание и характер. Продукт встроен внутрь истории, а не существует отдельным каталогом.</p>
         </div>
@@ -421,14 +492,14 @@
         <div class="feed-layout" id="feed-product">
           <div class="phone-feed"><div class="feed-grid">
             <div class="feed-tile"><img src="./IMG_6447.png" alt=""></div>
-            <div class="feed-tile"><img src="./IMG_6520.png" data-soie-tv alt=""></div>
+            <div class="feed-tile"><img src="./IMG_6520.png" data-live-image="tv_soie" alt=""></div>
             <div class="feed-tile"><img src="./IMG_6597.png" alt=""></div>
             <div class="feed-tile feed-txt feed-gold">STAY<br>WITH CHARACTER<small>SOIE</small></div>
             <div class="feed-tile"><img src="./IMG_6443.png" alt=""></div>
             <div class="feed-tile"><video muted autoplay loop playsinline src="./4289855894515363739.mov"></video></div>
             <div class="feed-tile"><img src="./IMG_6478.png" alt=""></div>
             <div class="feed-tile feed-txt feed-navy">ROOMS<br>ARE ONLY<br>THE START<small>ISTANBUL</small></div>
-            <div class="feed-tile"><img src="./IMG_6520.png" data-soie-tv alt=""></div>
+            <div class="feed-tile"><img src="./IMG_6520.png" data-live-image="tv_soie" alt=""></div>
           </div></div>
           <p class="feed-copy"><strong>Логика:</strong> когда нужно усилить продажу номера, мы не теряем fashion-язык. Даже продуктовый блок должен выглядеть частью одной визуальной системы.</p>
         </div>
@@ -500,64 +571,30 @@
   </footer>
 
   <script>
-    async function loadReferenceImage(id,path,count){
-      const img=document.getElementById(id);
-      if(!img) return;
-      try{
-        const parts=await Promise.all(Array.from({length:count},(_,i)=>fetch(path+'/c'+i+'.txt').then(r=>{
-          if(!r.ok) throw new Error('missing '+path+'/c'+i+'.txt');
-          return r.text();
-        })));
-        const joined=parts.join('').trim();
-        if(joined.length>1000) img.src='data:image/jpeg;base64,'+joined;
-      }catch(e){
-        console.warn('SOIE reference fallback kept visible',id,e);
-      }
+    // Load the approved SOIE visual assets stored in the repository.
+    // Every image keeps a visible fallback, so the page never shows a broken frame.
+    const liveImageCache=new Map();
+    async function getLiveImage(key){
+      if(liveImageCache.has(key)) return liveImageCache.get(key);
+      const promise=fetch('./assets/live/'+key+'.txt',{cache:'no-store'})
+        .then(r=>{if(!r.ok) throw new Error('missing '+key); return r.text();})
+        .then(txt=>{
+          const b64=txt.replace(/\s+/g,'').trim();
+          if(b64.length<1000) throw new Error('invalid '+key);
+          return 'data:image/jpeg;base64,'+b64;
+        });
+      liveImageCache.set(key,promise);
+      return promise;
     }
-    loadReferenceImage('soie-woman-example','assets/woman',7);
-    loadReferenceImage('soie-suitcase-example','assets/suitcase',5);
-
-    // Correct the old Park Avenue mark directly in the displayed TV photo.
-    // This keeps the original room photograph but makes every site use of IMG_6520 read as SOIE.
-    (function correctSoieTv(){
-      const targets=[...document.querySelectorAll('img[data-soie-tv]')];
-      if(!targets.length) return;
-      const source=new Image();
-      source.onload=()=>{
-        try{
-          const canvas=document.createElement('canvas');
-          canvas.width=source.naturalWidth;
-          canvas.height=source.naturalHeight;
-          const ctx=canvas.getContext('2d');
-          ctx.drawImage(source,0,0);
-
-          const w=canvas.width, h=canvas.height;
-          const x=w*0.055, y=h*0.245, pw=w*0.235, ph=h*0.087;
-
-          const g=ctx.createLinearGradient(x,y,x+pw,y+ph);
-          g.addColorStop(0,'rgba(24,20,18,.96)');
-          g.addColorStop(1,'rgba(18,17,17,.84)');
-          ctx.fillStyle=g;
-          ctx.fillRect(x,y,pw,ph);
-
-          ctx.textBaseline='top';
-          ctx.fillStyle='#d4ad54';
-          ctx.font=`${Math.round(w*0.055)}px "Bodoni Moda", Georgia, serif`;
-          ctx.fillText('SOIE',x+w*0.018,y+h*0.010);
-
-          ctx.fillStyle='rgba(222,191,119,.92)';
-          ctx.font=`${Math.max(9,Math.round(w*0.010))}px Arial, sans-serif`;
-          ctx.letterSpacing='2px';
-          ctx.fillText('BOUTIQUE HOTEL',x+w*0.020,y+h*0.045);
-
-          const fixed=canvas.toDataURL('image/jpeg',.94);
-          targets.forEach(img=>img.src=fixed);
-        }catch(e){
-          console.warn('SOIE TV correction fallback kept',e);
-        }
-      };
-      source.src='./IMG_6520.png';
-    })();
+    async function hydrateLiveImages(){
+      const targets=[...document.querySelectorAll('img[data-live-image]')];
+      await Promise.all(targets.map(async img=>{
+        const key=img.dataset.liveImage;
+        try{ img.src=await getLiveImage(key); }
+        catch(e){ console.warn('SOIE live image fallback kept',key,e); }
+      }));
+    }
+    hydrateLiveImages();
 
     const buttons=document.querySelectorAll('.feed-tabs button');
     const layouts=document.querySelectorAll('.feed-layout');
