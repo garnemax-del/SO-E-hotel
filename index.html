@@ -105,6 +105,31 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
 .rule{padding:26px 0;background:var(--navy);border-top:1px solid rgba(255,255,255,.15);font-family:Georgia,"Times New Roman",serif;font-size:22px}
 .rule:nth-child(odd){padding-right:40px}
 .rule:nth-child(even){padding-left:40px}
+
+.feed-tabs{display:flex;gap:8px;margin:36px 0 28px;overflow-x:auto;padding-bottom:4px}
+.feed-tabs button{background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;padding:11px 17px;font:inherit;font-size:11px;letter-spacing:.06em;cursor:pointer;white-space:nowrap}
+.feed-tabs button.active{background:var(--gold);border-color:var(--gold);color:var(--navy);font-weight:700}
+.feed-layout{display:none;grid-template-columns:minmax(420px,700px) 1fr;gap:46px;align-items:center}
+.feed-layout.active{display:grid}
+.insta-frame{background:#fff;padding:5px;box-shadow:0 18px 60px rgba(0,0,0,.22)}
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:#fff}
+.insta-grid img{aspect-ratio:3/4;width:100%;height:auto;object-fit:cover;display:block}
+.feed-explain{border-left:1px solid rgba(255,255,255,.2);padding-left:30px;color:rgba(255,255,255,.68)}
+.feed-explain h3{font-size:clamp(31px,3.2vw,46px);color:#fff;margin-bottom:20px}
+.feed-explain p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:0}
+.feed-explain strong{color:#fff}
+.feed-explain.recommended{border-left-color:var(--gold)}
+.recommend-pill{display:inline-block;margin-top:24px;color:var(--gold);border:1px solid rgba(199,154,72,.46);padding:8px 11px;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
+@media(max-width:900px){
+  .feed-layout{grid-template-columns:1fr;gap:30px}
+  .feed-explain{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:28px 0 0}
+}
+@media(max-width:560px){
+  .feed-tabs{margin-top:28px}
+  .feed-tabs button{padding:10px 13px}
+  .insta-grid{gap:3px}.insta-frame{padding:3px}
+}
+
 footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:11px;letter-spacing:.08em}
 @media(max-width:900px){
   .wrap{width:min(100% - 36px,1320px)}
@@ -140,6 +165,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
       <a href="#visual">Визуал</a>
       <a href="#characters">Герои</a>
       <a href="#motion">Motion</a>
+      <a href="#feed">Instagram</a>
     </nav>
     <div class="header-actions">
       <div class="lang-switch" aria-label="Language switcher">
@@ -385,9 +411,83 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
   </div>
 </section>
 
+<section id="feed" class="navy">
+  <div class="wrap">
+    <p class="eyebrow">10 · КАК МОЖЕТ ВЫГЛЯДЕТЬ INSTAGRAM</p>
+    <h2>Три уровня смелости.<br>Один рекомендуемый баланс.</h2>
+
+    <div class="feed-tabs" role="tablist" aria-label="Варианты Instagram-ленты">
+      <button class="active" type="button" data-feed="safe" role="tab" aria-selected="true">1 · Спокойный</button>
+      <button type="button" data-feed="balanced" role="tab" aria-selected="false">2 · Рекомендуемый</button>
+      <button type="button" data-feed="fashion" role="tab" aria-selected="false">3 · Fashion</button>
+    </div>
+
+    <div class="feed-layout active" id="feed-safe" data-feed-layout>
+      <div class="insta-frame">
+        <div class="insta-grid">
+          <img src="./IMG_6478.png" alt="SOIE интерьер">
+          <img src="./IMG_6804.webp" alt="SOIE ванная">
+          <img src="./IMG_6597.png" alt="SOIE интерьерная деталь">
+          <img src="./IMG_6793.png" alt="SOIE Woman">
+          <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
+          <img src="./IMG_6802.webp" alt="SOIE коридор">
+          <img src="./IMG_6781.webp" alt="SOIE интерьер">
+          <img src="./IMG_6808.png" alt="SOIE Kids">
+          <img src="./IMG_6782.webp" alt="SOIE интерьер">
+        </div>
+      </div>
+      <div class="feed-explain">
+        <h3>70% продукт / 30% характер</h3>
+        <p><strong>Плюс:</strong> максимально понятно, что продаём.<br><br><strong>Риск:</strong> сложнее заметно отличиться от хороших boutique hotels.<br><br><strong>Когда использовать:</strong> если нужен самый осторожный переход от каталога к бренду.</p>
+      </div>
+    </div>
+
+    <div class="feed-layout" id="feed-balanced" data-feed-layout>
+      <div class="insta-frame">
+        <div class="insta-grid">
+          <img src="./IMG_6793.png" alt="SOIE Woman">
+          <img src="./IMG_6478.png" alt="SOIE интерьер">
+          <img src="./IMG_6808.png" alt="SOIE Kids">
+          <img src="./IMG_6804.webp" alt="SOIE ванная">
+          <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
+          <img src="./IMG_6803.png" alt="SOIE Kids в коридоре">
+          <img src="./IMG_6781.webp" alt="SOIE интерьер">
+          <img src="./IMG_6780.png" alt="SOIE lifestyle">
+          <img src="./IMG_6597.png" alt="SOIE интерьерная деталь">
+        </div>
+      </div>
+      <div class="feed-explain recommended">
+        <h3>60% продукт / 40% характер</h3>
+        <p><strong>Почему я рекомендую:</strong> человек всё ещё хорошо понимает отель, но профиль уже нельзя спутать с Booking. Имиджевые кадры создают желание, реальные пространства поддерживают доверие.</p>
+        <div class="recommend-pill">МОЙ ВЫБОР ДЛЯ ЗАПУСКА</div>
+      </div>
+    </div>
+
+    <div class="feed-layout" id="feed-fashion" data-feed-layout>
+      <div class="insta-frame">
+        <div class="insta-grid">
+          <img src="./IMG_6808.png" alt="SOIE Kids">
+          <img src="./IMG_6793.png" alt="SOIE Woman">
+          <img src="./IMG_6807.png" alt="SOIE Kids">
+          <img src="./IMG_6780.png" alt="SOIE lifestyle">
+          <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
+          <img src="./IMG_6803.png" alt="SOIE Kids в коридоре">
+          <img src="./IMG_6478.png" alt="SOIE интерьер">
+          <img src="./IMG_6597.png" alt="SOIE интерьерная деталь">
+          <img src="./IMG_6804.webp" alt="SOIE ванная">
+        </div>
+      </div>
+      <div class="feed-explain">
+        <h3>50% продукт / 50% имиджевый</h3>
+        <p><strong>Плюс:</strong> самый сильный брендовый эффект.<br><br><strong>Риск:</strong> без строгой арт-дирекции профиль начнёт продавать картинки вместо отеля.<br><br><strong>Когда использовать:</strong> после формирования базовой узнаваемости SOIE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="final">
   <div class="wrap">
-    <p class="eyebrow">10 · ФИНАЛЬНЫЙ ФИЛЬТР</p>
+    <p class="eyebrow">11 · ФИНАЛЬНЫЙ ФИЛЬТР</p>
     <h2>Перед публикацией задаём один вопрос:<br>это мог снять любой красивый отель — или только SOIE?</h2>
     <p class="lead">Если кадр можно без изменений поставить в Instagram любого бутик-отеля, он нам не нужен.</p>
     <div class="rule-list">
@@ -401,5 +501,20 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
 </main>
 
 <footer><div class="wrap">SOIE · VISUAL BRAND BOOK · ISTANBUL</div></footer>
+
+<script>
+document.querySelectorAll('.feed-tabs').forEach(tabset=>{
+  const section=tabset.closest('#feed');
+  const buttons=[...tabset.querySelectorAll('button[data-feed]')];
+  const layouts=[...section.querySelectorAll('[data-feed-layout]')];
+  buttons.forEach(btn=>btn.addEventListener('click',()=>{
+    buttons.forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});
+    layouts.forEach(l=>l.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+    section.querySelector('#feed-'+btn.dataset.feed)?.classList.add('active');
+  }));
+});
+</script>
 </body>
 </html>
