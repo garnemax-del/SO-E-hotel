@@ -1,678 +1,346 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SOIE Boutique Hotel — Visual Brand Book 2026</title>
-  <meta name="description" content="SOIE Boutique Hotel Istanbul — визуальная стратегия, Instagram, Reels и бренд-система 2026.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&family=Prata&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --navy:#000A24;--gold:#D1A447;--ivory:#F4F0E7;--stone:#C9BCAA;
-      --burgundy:#6E2430;--walnut:#3B2A22;--ink:#161616;--muted:#706c66;
-      --line:rgba(22,22,22,.14);--white:#fff;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:#fff;color:var(--ink);font-family:Manrope,Arial,sans-serif;line-height:1.65}
-    img,video{display:block;width:100%}
-    a{color:inherit}
-    .topbar{
-      position:sticky;top:0;z-index:60;height:64px;padding:0 4vw;
-      display:flex;align-items:center;gap:30px;background:rgba(0,10,36,.94);
-      backdrop-filter:blur(18px);color:#fff;border-bottom:1px solid rgba(255,255,255,.1)
-    }
-    .brand{font-family:"Bodoni Moda",serif;font-size:28px;letter-spacing:.16em;color:var(--gold);text-decoration:none}
-    .topbar nav{margin-left:auto;display:flex;gap:22px;align-items:center}
-    .topbar nav a{font-size:11px;text-decoration:none;letter-spacing:.08em;opacity:.72}
-    .topbar nav a:hover{opacity:1;color:var(--gold)}
-    .version{font-size:10px;opacity:.45;white-space:nowrap}
-    .hero{min-height:calc(100vh - 64px);background:var(--navy);color:#fff;position:relative;display:grid;place-items:center;padding:90px 7vw;overflow:hidden}
-    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(209,164,71,.18);border-radius:50%}
-    .hero:before{width:560px;height:560px;right:-250px;top:-210px}
-    .hero:after{width:340px;height:340px;left:-170px;bottom:-180px}
-    .hero-inner{text-align:center;max-width:1050px;position:relative;z-index:2}
-    .hero-mark{font-family:"Bodoni Moda",serif;font-size:clamp(64px,13vw,150px);letter-spacing:.17em;color:var(--gold);line-height:.8;margin:24px 0 42px}
-    .eyebrow{font-size:10px;font-weight:600;letter-spacing:.23em;text-transform:uppercase;margin:0 0 20px}
-    .gold{color:var(--gold)!important}
-    .hero h1,.section h2,.final h2{font-family:"Bodoni Moda",serif;font-weight:400;line-height:1.06;margin:0}
-    .hero h1{font-size:clamp(42px,7vw,88px)}
-    .hero h1 em{font-style:italic;color:var(--gold)}
-    .hero-lead{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,2.2vw,29px);max-width:800px;margin:34px auto 0;color:rgba(255,255,255,.72)}
-    .scroll-note{position:absolute;bottom:24px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.45}
-    .section{position:relative;padding:110px 6vw}
-    .section-copy{max-width:1180px;margin:0 auto}
-    .section-number{position:absolute;top:44px;left:3vw;font-family:"Bodoni Moda",serif;font-size:13px;letter-spacing:.1em;color:#9a958e}
-    .section h2{font-size:clamp(38px,5.2vw,72px);max-width:1040px}
-    .section h2 span{color:var(--burgundy)}
-    .big-copy{font-family:"Cormorant Garamond",serif;font-size:clamp(22px,2.2vw,31px);max-width:900px;margin:34px 0;color:#4e4a45}
-    .statement-card{margin-top:46px;padding:42px;border:1px solid var(--line);display:grid;grid-template-columns:1.1fr .9fr;gap:30px;background:var(--ivory)}
-    .statement-en{font-family:"Prata",serif;font-size:clamp(26px,3vw,44px);line-height:1.18}
-    .statement-ru{display:flex;align-items:flex-end;font-size:14px;color:var(--muted)}
-    .navy{background:var(--navy);color:#fff}
-    .ivory{background:var(--ivory)}
-    .light{color:#fff!important}
-    .booking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
-    .booking-card{padding:36px;border:1px solid rgba(255,255,255,.16);min-height:245px;background:rgba(255,255,255,.035)}
-    .booking-card.accent{background:var(--gold);color:var(--navy);border-color:var(--gold)}.booking-card.trend{background:var(--burgundy);color:#fff;border-color:var(--burgundy)}
-    .mini-label{font-size:10px;letter-spacing:.18em;font-weight:600;margin-bottom:24px}
-    .booking-card h3{font-family:"Bodoni Moda",serif;font-size:34px;font-weight:400;margin:0 0 16px}
-    .booking-card p{font-size:14px;max-width:500px;margin:0;opacity:.78}
-    .journey{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:40px 0 12px;font-size:12px;letter-spacing:.13em}
-    .journey b{color:var(--gold);font-weight:400}
-    .journey-note{font-size:12px;color:rgba(255,255,255,.55)}
-    .roles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
-    .role{background:#fff;padding:34px}
-    .role strong{font-family:"Bodoni Moda",serif;font-size:32px;font-weight:400;display:block;margin-bottom:12px}
-    .role span{font-size:13px;color:var(--muted)}
-    .visual-grid{display:grid;grid-template-columns:1.35fr .65fr .65fr;gap:10px;margin-top:42px}
-    .visual-card{position:relative;overflow:hidden;min-height:330px;background:#ddd}
-    .visual-card:first-child{grid-row:span 2;min-height:670px}
-    .visual-card img{height:100%;object-fit:cover;transition:transform .5s ease}
-    .visual-card:hover img{transform:scale(1.02)}
-    .visual-card .cap{position:absolute;left:14px;bottom:14px;background:rgba(0,10,36,.88);color:#fff;padding:8px 10px;font-size:10px;letter-spacing:.08em}
-    .visual-note{max-width:860px;margin:34px 0 0;font-family:"Cormorant Garamond",serif;font-size:24px;color:#555049}
-    .sensory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
-    .sense{padding:30px 26px;border-top:1px solid var(--gold);background:#fff}
-    .sense i{font-family:"Bodoni Moda",serif;font-size:46px;font-style:normal;color:var(--gold)}
-    .sense h3{font-family:"Bodoni Moda",serif;font-size:27px;font-weight:400;margin:10px 0}
-    .sense p{font-size:13px;color:var(--muted);margin:0}
-    .istanbul-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
-    .istanbul-item{padding:22px 24px;background:var(--ivory);font-size:14px}
-    .istanbul-item b{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;margin-bottom:5px;color:var(--burgundy)}
-    .characters{background:#f7f4ef}
-    .character-feature{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:stretch;margin-top:50px}
-    .character-media{min-height:560px;overflow:hidden;background:#ddd}
-    .character-media img,.character-media video{height:100%;object-fit:cover}
-    .character-text{padding:24px 0;align-self:center}
-    .char-tag{font-size:10px;letter-spacing:.2em;font-weight:600;color:var(--burgundy);margin-bottom:18px}
-    .character-text h3,.character-cards h3{font-family:"Bodoni Moda",serif;font-weight:400;line-height:1.08}
-    .character-text h3{font-size:44px;margin:0 0 22px}
-    .character-text p{font-family:"Cormorant Garamond",serif;font-size:23px;color:#4f4b46}
-    .char-job{margin-top:28px;border-left:2px solid var(--gold);padding:12px 0 12px 18px;font-size:14px}
-    .character-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
-    .character-cards article{background:#fff;padding:28px;min-height:300px}
-    .character-cards h3{font-size:27px;margin:12px 0 15px}
-    .character-cards p{font-size:13px;color:var(--muted)}
-    .character-cards b{font-size:12px;display:block;margin-top:18px}
-    .character-example{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin:28px 0 18px;background:var(--navy);min-height:520px;overflow:hidden}
-    .character-example-media{min-height:520px;background:#ddd;overflow:hidden}
-    .character-example-media img{width:100%;height:100%;object-fit:cover}
-    .character-example-copy{padding:46px;align-self:center;color:#fff}
-    .character-example-copy .char-tag{color:var(--gold)}
-    .character-example-copy h3{font-family:"Bodoni Moda",serif;font-size:38px;line-height:1.08;font-weight:400;margin:0 0 18px}
-    .character-example-copy p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.45;color:rgba(255,255,255,.76);margin:0}
-    .character-example-copy b{display:block;margin-top:22px;font-size:12px;line-height:1.6;color:#fff}
-    .character-example.alt{background:#fff;border:1px solid var(--line)}
-    .character-example.alt .character-example-copy{color:var(--ink)}
-    .character-example.alt .character-example-copy .char-tag{color:var(--burgundy)}
-    .character-example.alt .character-example-copy p{color:var(--muted)}
-    .character-example.alt .character-example-copy b{color:var(--ink)}
-    .kids-story{margin:34px 0 22px;padding:38px;background:#fff;border:1px solid var(--line)}
-    .kids-story-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:34px;align-items:end;margin-bottom:28px}
-    .kids-story-head h3{font-family:"Bodoni Moda",serif;font-size:40px;line-height:1.08;font-weight:400;margin:0}
-    .kids-story-head p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.45;color:var(--muted);margin:0}
-    .compare-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
-    .compare-frame{position:relative;overflow:hidden;background:#ddd;min-height:360px}
-    .compare-frame img{width:100%;height:100%;min-height:360px;object-fit:cover}
-    .compare-label{position:absolute;left:12px;top:12px;z-index:2;background:rgba(0,10,36,.88);color:#fff;padding:7px 9px;font-size:9px;letter-spacing:.12em}
-    .compare-copy{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 24px}
-    .compare-copy p{margin:0;padding:15px 16px;background:var(--ivory);font-size:13px;color:var(--muted)}
-    .kids-final{display:grid;grid-template-columns:1.15fr .85fr;gap:0;margin-top:18px;background:var(--navy);color:#fff;overflow:hidden}
-    .kids-final-media{min-height:500px;background:#ddd}
-    .kids-final-media img{width:100%;height:100%;min-height:500px;object-fit:cover}
-    .kids-final-copy{padding:42px;align-self:center}
-    .kids-final-copy h3{font-family:"Bodoni Moda",serif;font-size:36px;line-height:1.08;font-weight:400;margin:0 0 16px}
-    .kids-final-copy p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.45;color:rgba(255,255,255,.75);margin:0}
-    .kids-final-copy b{display:block;margin-top:20px;font-size:12px;line-height:1.6;color:#fff}
-
-
-    /* Editorial story blocks — based on approved SOIE layout, without infographic decoration */
-    .story-editorial{background:#f7f3eb}
-    .story-editorial .section-copy{max-width:1240px}
-    .story-intro{max-width:1100px;margin-bottom:42px}
-    .story-intro h2{max-width:1000px}
-    .story-intro .big-copy{margin-bottom:0}
-    .story-board{border:1px solid rgba(0,10,36,.12);background:#fff;overflow:hidden}
-    .story-woman{display:grid;grid-template-columns:320px 1fr 1fr;min-height:640px}
-    .story-copy{background:var(--navy);color:#fff;padding:46px 34px;display:flex;flex-direction:column;justify-content:center}
-    .story-copy .char-tag{color:var(--gold);margin-bottom:26px}
-    .story-copy h3{font-family:"Bodoni Moda",serif;font-size:40px;font-weight:400;line-height:1.12;margin:0 0 24px}
-    .story-copy p{font-family:"Cormorant Garamond",serif;font-size:21px;line-height:1.45;color:rgba(255,255,255,.8);margin:0}
-    .story-photo{position:relative;min-height:640px;background:#ddd;overflow:hidden;border-left:1px solid rgba(255,255,255,.15)}
-    .story-photo img{width:100%;height:100%;object-fit:cover}
-    .story-caption{position:absolute;left:0;right:0;bottom:0;background:rgba(247,243,235,.96);color:var(--navy);padding:18px 22px;font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.25}
-    .story-kids{display:grid;grid-template-columns:280px repeat(3,1fr);border-top:2px solid #fff}
-    .story-kids .story-copy{padding:40px 30px}
-    .story-kids .story-copy h3{font-size:36px}
-    .story-kids .story-photo{min-height:520px}
-    .story-kids .story-caption{font-size:16px}
-    .series-note{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,10,36,.13);margin-top:24px;border:1px solid rgba(0,10,36,.13)}
-    .series-note article{background:#fff;padding:28px}
-    .series-note .char-tag{margin-bottom:12px}
-    .series-note h3{font-family:"Bodoni Moda",serif;font-size:29px;font-weight:400;line-height:1.1;margin:0 0 12px}
-    .series-note p{font-size:13px;color:var(--muted);margin:0}
-    .before-after{background:#fff}
-    .before-after .section-copy{max-width:1240px}
-    .ba-intro{max-width:1050px;margin-bottom:36px}
-    .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:18px;background:var(--navy)}
-    .ba-card{background:#f4f0e7}
-    .ba-head{padding:13px 18px;background:var(--navy);color:var(--gold);text-align:center;font-family:"Cormorant Garamond",serif;font-size:21px}
-    .ba-media{height:430px;overflow:hidden;background:#ddd}
-    .ba-media img{width:100%;height:100%;object-fit:cover}
-    .ba-note{font-family:"Cormorant Garamond",serif;font-size:20px;color:#3f3a34;margin:14px 0 34px;padding:0 8px}
-    .ba-feature{display:grid;grid-template-columns:280px 1fr;margin-top:12px;background:var(--navy);color:#fff;overflow:hidden}
-    .ba-feature-copy{padding:38px 30px;display:flex;flex-direction:column;justify-content:center}
-    .ba-feature-copy h3{font-family:"Bodoni Moda",serif;font-weight:400;font-size:35px;line-height:1.1;margin:0 0 18px}
-    .ba-feature-copy p{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.4;color:rgba(255,255,255,.78);margin:0}
-    .ba-feature-media{min-height:500px;background:#ddd}
-    .ba-feature-media img{width:100%;height:100%;object-fit:cover}
-    .usp-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18);margin-top:1px}
-    .usp-strip article{background:var(--navy);color:#fff;padding:34px 28px;text-align:center}
-    .usp-strip b{display:block;font-family:"Bodoni Moda",serif;font-size:27px;font-weight:400;color:var(--gold);margin-bottom:8px}
-    .usp-strip span{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.35}
-    .system-line{margin-top:1px;background:var(--navy);color:#fff;padding:28px 7vw;text-align:center;font-family:"Cormorant Garamond",serif;font-size:21px}
-    .no-infographic-note{margin-top:28px;padding-top:20px;border-top:1px solid var(--gold);font-size:12px;letter-spacing:.05em;color:var(--muted)}
-    @media(max-width:1000px){
-      .story-woman{grid-template-columns:280px 1fr 1fr}.story-kids{grid-template-columns:250px 1fr 1fr}.story-kids .story-photo:last-child{display:none}
-      .series-note,.usp-strip{grid-template-columns:1fr 1fr 1fr}
-    }
-    @media(max-width:650px){
-      .story-woman,.story-kids,.series-note,.ba-pair,.ba-feature,.usp-strip{grid-template-columns:1fr}
-      .story-copy{padding:32px 24px}.story-copy h3{font-size:34px}
-      .story-photo,.story-kids .story-photo{min-height:0;aspect-ratio:3/4;border-left:0;border-top:1px solid #fff}
-      .story-kids .story-photo:last-child{display:block}
-      .ba-media{height:auto;aspect-ratio:4/3}.ba-feature-media{min-height:0;aspect-ratio:4/3}
-      .series-note{gap:1px}
-    }
-
-    .identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:48px}
-    .palette{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .swatch{aspect-ratio:1/1;display:flex;align-items:flex-end;padding:15px;font-size:10px;letter-spacing:.08em}
-    .s-navy{background:var(--navy);color:#fff}.s-gold{background:var(--gold)}.s-ivory{background:var(--ivory)}.s-stone{background:var(--stone)}.s-burg{background:var(--burgundy);color:#fff}.s-walnut{background:var(--walnut);color:#fff}
-    .type-stack{border-top:1px solid var(--line)}
-    .type-row{padding:22px 0;border-bottom:1px solid var(--line)}
-    .type-row b{display:block;font-size:10px;letter-spacing:.16em;margin-bottom:9px}
-    .bodoni{font-family:"Bodoni Moda",serif;font-size:34px}.cormorant{font-family:"Cormorant Garamond",serif;font-size:34px}.prata{font-family:Prata,serif;font-size:28px}.manrope{font-family:Manrope,sans-serif;font-size:22px}
-    .identity-notes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
-    .identity-note{border:1px solid var(--line);padding:25px}
-    .identity-note h3{font-family:"Bodoni Moda",serif;font-size:28px;font-weight:400;margin:0 0 10px}
-    .identity-note p{font-size:13px;color:var(--muted);margin:0}
-    .intensity{margin-top:54px}
-    .intensity-row{display:grid;grid-template-columns:110px 1fr 1fr;gap:18px;padding:19px 0;border-top:1px solid var(--line);font-size:13px}
-    .intensity-row strong{font-family:"Bodoni Moda",serif;font-size:25px;font-weight:400}
-    .feed{background:#111;color:#fff}
-    .feed-header{display:flex;justify-content:space-between;gap:30px;align-items:end}
-    .feed-tabs{display:flex;gap:8px;flex-wrap:wrap}
-    .feed-tabs button{appearance:none;border:1px solid rgba(255,255,255,.22);background:transparent;color:#fff;padding:10px 14px;font:600 10px Manrope;letter-spacing:.1em;cursor:pointer}
-    .feed-tabs button.active{background:var(--gold);border-color:var(--gold);color:var(--navy)}
-    .feed-layout{display:none;margin-top:42px}
-    .feed-layout.active{display:block}
-    .phone-feed{max-width:930px;margin:auto;background:#050505;padding:8px;border:1px solid rgba(255,255,255,.08)}
-    .feed-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-    .feed-tile{aspect-ratio:3/4;overflow:hidden;position:relative;background:#222}
-    .feed-tile img,.feed-tile video{height:100%;object-fit:cover}
-    .feed-txt{display:grid;place-items:center;text-align:center;padding:20px;font-family:"Bodoni Moda",serif;font-size:clamp(20px,2.4vw,34px);line-height:1.1}
-    .feed-txt small{font-family:Manrope,sans-serif;font-size:8px;letter-spacing:.18em;margin-top:10px}
-    .feed-navy{background:var(--navy)}.feed-burg{background:var(--burgundy)}.feed-ivory{background:var(--ivory);color:var(--ink)}.feed-gold{background:var(--gold);color:var(--navy)}
-    .feed-copy{max-width:900px;margin:32px auto 0;color:rgba(255,255,255,.65);font-size:14px}
-    .feed-copy strong{color:#fff}
-    .motion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:44px}
-    .motion{aspect-ratio:9/16;position:relative;background:#111;overflow:hidden}
-    .motion video{height:100%;object-fit:cover}
-    .motion span{position:absolute;left:10px;bottom:10px;background:rgba(0,10,36,.86);color:#fff;padding:7px 9px;font-size:9px;letter-spacing:.08em}
-    .motion-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px}
-    .motion-rule{border-top:1px solid var(--gold);padding:22px 0}
-    .motion-rule h3{font-family:"Bodoni Moda",serif;font-size:27px;font-weight:400;margin:0 0 10px}
-    .motion-rule p{font-size:13px;color:var(--muted)}
-    .rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:46px}
-    .rules-grid>div{padding:28px;background:#fff;border:1px solid var(--line)}
-    .rules-grid span{font-family:"Bodoni Moda",serif;font-size:34px;color:var(--gold)}
-    .rules-grid h3{font-family:"Bodoni Moda",serif;font-size:27px;font-weight:400;margin:12px 0}
-    .rules-grid p{font-size:13px;color:var(--muted);margin:0}
-    .owner-note{background:var(--ivory);padding:30px 34px;border-left:2px solid var(--gold);margin-top:36px;max-width:980px}
-    .owner-note strong{display:block;font-family:"Bodoni Moda",serif;font-size:26px;font-weight:400;margin-bottom:8px}
-    .final{padding:120px 7vw;text-align:center;background:var(--navy);color:#fff}
-    .final h2{font-size:clamp(44px,6vw,82px);max-width:1050px;margin:auto}
-    .final>p:not(.eyebrow){font-family:"Cormorant Garamond",serif;font-size:30px;color:rgba(255,255,255,.68)}
-    .final-line{margin-top:46px;font-size:10px;letter-spacing:.16em;color:var(--gold)}
-    footer{display:flex;justify-content:space-between;gap:20px;padding:24px 4vw;background:#05070d;color:rgba(255,255,255,.44);font-size:10px;letter-spacing:.08em}
-    @media(max-width:1000px){
-      .topbar nav{display:none}.version{margin-left:auto}
-      .roles,.sensory-grid,.character-cards,.motion-grid{grid-template-columns:1fr 1fr}
-      .visual-grid{grid-template-columns:1fr 1fr}.visual-card:first-child{grid-column:span 2;grid-row:auto;min-height:600px}
-      .identity-grid,.character-feature{grid-template-columns:1fr}
-      .character-media{min-height:520px}
-      .motion-rules,.rules-grid{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:650px){
-      .section{padding:84px 5vw}.section-number{display:none}.hero{padding:70px 6vw}
-      .statement-card,.booking-grid,.roles,.sensory-grid,.istanbul-list,.identity-notes,.character-cards,.motion-grid,.motion-rules,.rules-grid{grid-template-columns:1fr}
-      .visual-grid{grid-template-columns:1fr}.visual-card:first-child{grid-column:auto;min-height:470px}.visual-card{min-height:420px}
-      .palette{grid-template-columns:1fr 1fr 1fr}
-      .character-media{min-height:470px}.character-text h3{font-size:38px}
-      .character-example{grid-template-columns:1fr;min-height:0}.character-example-media{min-height:0;aspect-ratio:3/4}.character-example-copy{padding:30px 24px}.character-example-copy h3{font-size:32px}
-      .kids-story{padding:24px 14px}.kids-story-head,.compare-pair,.compare-copy,.kids-final{grid-template-columns:1fr}.kids-story-head{gap:16px}.kids-story-head h3{font-size:34px}.compare-frame,.compare-frame img{min-height:300px}.kids-final-media,.kids-final-media img{min-height:420px}.kids-final-copy{padding:30px 22px}
-      .intensity-row{grid-template-columns:70px 1fr}.intensity-row span:last-child{grid-column:2}
-      .feed-header{display:block}.feed-tabs{margin-top:24px}.feed-grid{gap:2px}
-      footer{display:block}footer span{display:block;margin:5px 0}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07162f">
+<title>SOIE — Visual Brand Book</title>
+<style>
+:root{
+  --navy:#07162f;
+  --navy2:#0b2140;
+  --ivory:#f4efe7;
+  --paper:#fbf8f2;
+  --ink:#152238;
+  --muted:#736d66;
+  --gold:#c79a48;
+  --burg:#7d2632;
+  --line:rgba(7,22,47,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+img,video{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.serif{font-family:Georgia,"Times New Roman",serif}
+.wrap{width:min(1320px,calc(100% - 64px));margin:auto}
+.eyebrow{margin:0 0 18px;color:var(--gold);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(48px,8vw,118px);line-height:.92;letter-spacing:-.045em}
+h2{font-size:clamp(40px,5vw,72px);line-height:1.02;letter-spacing:-.035em}
+h3{font-size:clamp(27px,3vw,44px);line-height:1.08}
+p{line-height:1.65}
+.lead{font-family:Georgia,"Times New Roman",serif;font-size:clamp(22px,2.4vw,34px);line-height:1.38}
+.small{font-size:14px;line-height:1.65;color:var(--muted)}
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(7,22,47,.97);color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.12)
+}
+.header-inner{height:94px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:Georgia,"Times New Roman",serif;color:var(--gold);font-size:45px;letter-spacing:.12em}
+.version{font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.55)}
+nav{display:flex;gap:24px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.hero{position:relative;height:min(82vh,920px);min-height:620px;background:var(--navy);overflow:hidden}
+.hero video{position:absolute;inset:0;opacity:.55}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,22,47,.92) 0%,rgba(7,22,47,.55) 45%,rgba(7,22,47,.18) 100%)}
+.hero-copy{position:relative;z-index:2;color:#fff;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 70px;max-width:970px}
+.hero h1{margin-bottom:28px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{max-width:820px;color:rgba(255,255,255,.84);margin-bottom:0}
+section{padding:100px 0;border-bottom:1px solid var(--line)}
+.intro-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:90px;align-items:start}
+.statement{padding-left:26px;border-left:2px solid var(--gold)}
+.statement strong{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400;display:block;margin-bottom:8px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:54px}
+.principle{background:var(--paper);padding:38px 34px;min-height:230px}
+.principle .n{color:var(--gold);font-size:11px;letter-spacing:.15em;margin-bottom:36px}
+.principle h3{font-size:34px;margin-bottom:14px}
+.principle p{margin:0;color:var(--muted);font-size:14px}
+.navy{background:var(--navy);color:#fff}
+.navy .small,.navy p{color:rgba(255,255,255,.7)}
+.navy .eyebrow{color:var(--gold)}
+.full-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--navy)}
+.media-card{position:relative;min-height:650px;background:#ddd;overflow:hidden}
+.media-card.tall{min-height:760px}
+.media-card.wide{grid-column:1/-1;min-height:650px}
+.media-cap{position:absolute;left:0;right:0;bottom:0;padding:24px 26px;color:#fff;background:linear-gradient(transparent,rgba(4,13,30,.86));font-family:Georgia,"Times New Roman",serif;font-size:20px}
+.editorial{display:grid;grid-template-columns:.78fr 1.1fr 1.1fr;background:var(--navy);overflow:hidden}
+.editorial-copy{padding:58px 44px;display:flex;flex-direction:column;justify-content:center;color:#fff}
+.editorial-copy p{color:rgba(255,255,255,.72);font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.5}
+.editorial .media-card{min-height:720px;border-left:1px solid rgba(255,255,255,.12)}
+.editorial .media-cap{background:rgba(244,239,231,.95);color:var(--ink);font-size:17px}
+.character-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.character{background:var(--paper);padding:44px 34px}
+.character .label{font-size:11px;letter-spacing:.16em;color:var(--burg);margin-bottom:28px}
+.character h3{font-size:34px}
+.character p{font-size:14px;color:var(--muted);margin-bottom:0}
+.quote{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,4vw,52px);line-height:1.2;max-width:980px}
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:46px}
+.ba-card{border:1px solid var(--line);background:#fff}
+.ba-label{padding:15px 20px;background:var(--navy);color:var(--gold);font-family:Georgia,"Times New Roman",serif;font-size:18px}
+.ba-media{height:520px}
+.ba-copy{padding:24px 26px;font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.45}
+.motion-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.motion{background:#020916;min-height:620px;position:relative;overflow:hidden}
+.motion video{position:absolute;inset:0}
+.motion-copy{position:absolute;inset:auto 0 0;padding:80px 28px 28px;color:white;background:linear-gradient(transparent,rgba(4,13,30,.9))}
+.motion-copy b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:400}
+.motion-copy p{font-size:13px;color:rgba(255,255,255,.72);margin:8px 0 0}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:330px;gap:2px;background:var(--navy)}
+.gallery figure{margin:0;position:relative;overflow:hidden}
+.gallery figure:first-child{grid-row:span 2}
+.gallery figure:nth-child(4){grid-column:2/4}
+.gallery figcaption{position:absolute;left:18px;bottom:18px;color:#fff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-shadow:0 2px 15px #000}
+.final{background:var(--navy);color:#fff;padding:110px 0}
+.final h2{max-width:1000px}
+.final .lead{max-width:850px;color:rgba(255,255,255,.78)}
+.rule-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.12);margin-top:54px}
+.rule{padding:26px 0;background:var(--navy);border-top:1px solid rgba(255,255,255,.15);font-family:Georgia,"Times New Roman",serif;font-size:22px}
+.rule:nth-child(odd){padding-right:40px}
+.rule:nth-child(even){padding-left:40px}
+footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:11px;letter-spacing:.08em}
+@media(max-width:900px){
+  .wrap{width:min(100% - 36px,1320px)}
+  nav{display:none}.header-inner{height:78px}.logo{font-size:36px}
+  .hero{height:72vh;min-height:560px}.hero-copy{padding-bottom:46px}
+  section{padding:72px 0}
+  .intro-grid,.editorial,.character-grid,.before-after,.motion-grid{grid-template-columns:1fr}
+  .three{grid-template-columns:1fr}
+  .editorial-copy{padding:42px 28px}.editorial .media-card{min-height:0;aspect-ratio:3/4}
+  .full-grid{grid-template-columns:1fr}.media-card,.media-card.tall,.media-card.wide{min-height:0;aspect-ratio:4/5}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:280px}.gallery figure:first-child{grid-row:span 2}.gallery figure:nth-child(4){grid-column:1/-1}
+  .motion{min-height:0;aspect-ratio:9/16}
+  .rule-list{grid-template-columns:1fr}.rule,.rule:nth-child(odd),.rule:nth-child(even){padding:22px 0}
+}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 28px)}
+  h1{font-size:53px}.lead{font-size:22px}
+  .hero{min-height:520px}
+  .principle{min-height:0;padding:30px 24px}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:auto;gap:12px;background:transparent}
+  .gallery figure,.gallery figure:first-child,.gallery figure:nth-child(4){grid-column:auto;grid-row:auto;aspect-ratio:4/5}
+  .before-after{gap:18px}.ba-media{height:auto;aspect-ratio:4/3}
+}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#top">SOIE</a>
+<header>
+  <div class="wrap header-inner">
+    <div class="logo">SOIE</div>
     <nav>
-      <a href="#idea">Идея</a>
+      <a href="#strategy">Стратегия</a>
       <a href="#visual">Визуал</a>
-      <a href="#istanbul">Стамбул</a>
       <a href="#characters">Герои</a>
-      <a href="#identity">Айдентика</a>
-      <a href="#feed">Instagram</a>
-      <a href="#motion">Reels</a>
+      <a href="#motion">Motion</a>
     </nav>
-    <span class="version">Visual Brand Book · v2</span>
-  </header>
+    <div class="version">VISUAL BRAND BOOK · NEW BUILD</div>
+  </div>
+</header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow gold">SOIE BOUTIQUE HOTEL · ISTANBUL</p>
-        <div class="hero-mark">SOIE</div>
-        <h1>Современный Стамбул.<br><em>Память прошлого — в деталях.</em></h1>
-        <p class="hero-lead">Я строю визуальный язык SOIE так, чтобы человек сначала захотел этот опыт, а уже потом пошёл проверять номер, цену и даты.</p>
+<main>
+<section class="hero">
+  <video autoplay muted loop playsinline preload="metadata" src="./70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video>
+  <div class="wrap hero-copy">
+    <p class="eyebrow">SOIE · ISTANBUL</p>
+    <h1>Современный бутик-отель<br><em>с памятью города.</em></h1>
+    <p class="lead">Задача Instagram — не просто показать номер, а влюбить в стиль жизни SOIE. Мы показываем не только интерьер, а историю проживания внутри него.</p>
+  </div>
+</section>
+
+<section id="strategy">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <p class="eyebrow">01 · ПОЗИЦИОНИРОВАНИЕ</p>
+        <h2>Не «исторический отель».<br>Не «султанский Стамбул».</h2>
+        <p class="lead">SOIE современный. История города здесь чувствуется в деталях, материалах, архитектуре и ритме — но мы не превращаем её в костюм.</p>
       </div>
-      <div class="scroll-note">↓ Visual brand direction 2026</div>
-    </section>
-
-    <section id="idea" class="section">
-      <div class="section-number">01</div>
-      <div class="section-copy">
-        <p class="eyebrow">ЧТО ТАКОЕ SOIE</p>
-        <h2>SOIE — современный бутик-отель<br><span>с памятью города.</span></h2>
-        <p class="big-copy">SOIE живёт в сегодняшнем Стамбуле, но сохраняет связь с характером города и его историей. Мы не превращаем прошлое в декорацию и не играем в «султанский» образ. История проявляется естественно — в архитектуре, фактурах, цвете, деталях, жестах и самом ритме города. Поэтому визуально SOIE должен ощущаться современно, стильно и живо.</p>
-        <div class="statement-card">
-          <div class="statement-en">A modern Istanbul stay.<br>With the city in its character.</div>
-          <div class="statement-ru">Наша задача — показать не «исторический отель», а современный стиль жизни в Стамбуле, где прошлое чувствуется в деталях и добавляет месту характер.</div>
-        </div>
+      <div class="statement">
+        <strong>Главная задача</strong>
+        <p>Не делать ещё одну красивую страницу отеля. Создать визуальный язык, по которому SOIE узнаётся без логотипа.</p>
       </div>
-    </section>
+    </div>
 
-    <section class="section navy">
-      <div class="section-number light">02</div>
-      <div class="section-copy">
-        <p class="eyebrow gold">ТРИ ПРИНЦИПА МОЕЙ СТРАТЕГИИ</p>
-        <h2 class="light">У каждого канала своя задача.<br><span class="gold">Вместе они формируют выбор SOIE.</span></h2>
-        <div class="booking-grid">
-          <article class="booking-card">
-            <div class="mini-label">01 · BOOKING.COM</div>
-            <h3>Помогаем выбрать номер</h3>
-            <p>На Booking я оставляю продукт максимально понятным: реальные номера, планировка, ванная, детали, свет, вид и всё, что помогает сравнить варианты и принять рациональное решение. Здесь фотография отвечает на вопрос: «Какой номер мне подходит?»</p>
-          </article>
-          <article class="booking-card accent">
-            <div class="mini-label">02 · INSTAGRAM</div>
-            <h3>Влюбляем в стиль жизни SOIE</h3>
-            <p>Задача Instagram — не просто показать номер, а сделать так, чтобы человек захотел прожить этот опыт. Утро в отеле, возвращение после прогулки по городу, свет в комнате, движение, одежда, детали, люди — всё должно складываться в образ жизни SOIE. Сначала человек влюбляется в атмосферу, а уже потом идёт выбирать номер.</p>
-          </article>
-          <article class="booking-card trend">
-            <div class="mini-label">03 · BRAND POSITION</div>
-            <h3>Мы создаём тренды</h3>
-            <p>Я не строю визуальную систему отеля вокруг очередного популярного шаблона. У SOIE появляется собственный код — современная одежда, культурные детали Стамбула, характерное движение, цвет и композиция. Именно последовательность делает стиль узнаваемым и со временем позволяет бренду самому задавать визуальное направление.</p>
-          </article>
-        </div>
-        <div class="journey"><span>ВЫБОР НОМЕРА</span><b>→</b><span>ЖЕЛАНИЕ ОКАЗАТЬСЯ В SOIE</span><b>→</b><span>УЗНАВАЕМЫЙ ВИЗУАЛЬНЫЙ КОД</span></div>
-        <p class="journey-note">Booking даёт уверенность в продукте. Instagram создаёт эмоциональный выбор. Собственный визуальный язык превращает SOIE в бренд, который запоминают.</p>
+    <div class="three">
+      <article class="principle">
+        <div class="n">01</div>
+        <h3>Booking</h3>
+        <p>Чтобы выбрать номер. Здесь человек должен спокойно понять пространство, категорию, детали и принять решение о бронировании.</p>
+      </article>
+      <article class="principle">
+        <div class="n">02</div>
+        <h3>Instagram</h3>
+        <p>Чтобы влюбиться в стиль жизни SOIE. Здесь мы продаём не метры и кровать, а ощущение: «я хочу оказаться внутри этого кадра».</p>
+      </article>
+      <article class="principle">
+        <div class="n">03</div>
+        <h3>Не догоняем тренды</h3>
+        <p>Мы создаём собственный визуальный язык. Тренд может быть инструментом, но никогда не становится причиной снять кадр.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="visual" class="navy">
+  <div class="wrap">
+    <p class="eyebrow">02 · РЕАЛЬНЫЙ SOIE</p>
+    <h2>Интерьер не меняем.<br>Меняем то, что происходит внутри него.</h2>
+    <p class="lead">Фотографии из репозитория используем в исходном качестве. Никаких base64-прокси, сжатых превью и серых плейсхолдеров.</p>
+
+    <div class="gallery">
+      <figure><img src="./IMG_6443.png" alt="SOIE visual 01"><figcaption>SOIE · lifestyle / room</figcaption></figure>
+      <figure><img src="./IMG_6447.png" alt="SOIE visual 02"><figcaption>SOIE · arrival / detail</figcaption></figure>
+      <figure><img src="./IMG_6478.png" alt="SOIE visual 03"><figcaption>SOIE · interior</figcaption></figure>
+      <figure><img src="./IMG_6520.png" alt="SOIE TV visual — Ortaköy and SOIE"><figcaption>SOIE · Ortaköy / welcome screen</figcaption></figure>
+      <figure><img src="./IMG_6597.png" alt="SOIE visual 05"><figcaption>SOIE · interior detail</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="characters">
+  <div class="wrap">
+    <p class="eyebrow">03 · ГЕРОИ SOIE</p>
+    <h2>У каждого героя свой характер.<br>Но они живут в одном мире.</h2>
+    <p class="lead">Нам не нужны случайные «люди в отеле». Каждый герой нужен для конкретного сценария и должен продолжать характер SOIE.</p>
+
+    <div class="character-grid">
+      <article class="character">
+        <div class="label">SOIE WOMAN</div>
+        <h3>Героиня своей поездки</h3>
+        <p>Не «девушка в красивом отеле». Утро, халат, движение, сборы, чемодан, возвращение после города. За счёт жестов и современного styling номер становится частью её поездки.</p>
+      </article>
+      <article class="character">
+        <div class="label">SOIE MAN</div>
+        <h3>Современный городской ритм</h3>
+        <p>Не бизнесмен из гостиничного каталога. Спокойный, уверенный, современный герой. Чем историчнее пространство, тем современнее одежда, пластика и поведение.</p>
+      </article>
+      <article class="character">
+        <div class="label">SOIE KIDS</div>
+        <h3>Стиль без family-клише</h3>
+        <p>Не «милые дети в отеле». Немного fashion, немного иронии, одна культурная деталь и характер. Семейный контент остаётся частью эстетики бренда.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="navy">
+  <div class="wrap">
+    <div class="editorial">
+      <div class="editorial-copy">
+        <p class="eyebrow">SOIE WOMAN</p>
+        <h3>Сначала история.<br>Потом кадр.</h3>
+        <p>Мы не ставим героиню в центр комнаты ради красивой фотографии. Мы придумываем момент: она проснулась, собирается, только приехала, возвращается после города. Камера как будто застала её внутри собственной жизни.</p>
       </div>
-    </section>
+      <div class="media-card"><img src="./IMG_6443.png" alt="SOIE Woman — morning"><div class="media-cap">Утро в SOIE — тот же номер, но в нём уже есть жизнь.</div></div>
+      <div class="media-card"><img src="./IMG_6447.png" alt="SOIE Woman — arrival"><div class="media-cap">Приезд / сборы — отель становится частью самой поездки.</div></div>
+    </div>
+  </div>
+</section>
 
-    <section class="section">
-      <div class="section-number">03</div>
-      <div class="section-copy">
-        <p class="eyebrow">РОЛЬ КОНТЕНТА</p>
-        <h2>Лента не должна быть каталогом номеров.</h2>
-        <p class="big-copy">Продуктовый контент нужен, но он работает сильнее, когда существует рядом с имиджевым слоем. Рекомендованный баланс — примерно 60% продукт / 40% характер, люди, город и визуальные истории.</p>
-        <div class="roles">
-          <div class="role"><strong>Продукт</strong><span>Номер, кровать, ванная, детали сервиса, завтрак, виды. Даёт понимание.</span></div>
-          <div class="role"><strong>Характер</strong><span>Герои, жесты, странный crop, одежда, движение. Даёт узнаваемость.</span></div>
-          <div class="role"><strong>Город</strong><span>Стамбул как ощущение вокруг проживания, а не набор открыток. Даёт желание приехать.</span></div>
-        </div>
+<section>
+  <div class="wrap">
+    <p class="eyebrow">04 · SOIE MAN / SOIE KIDS</p>
+    <h2>Не отдельные кампании.<br>Одна визуальная семья.</h2>
+    <div class="intro-grid">
+      <div>
+        <p class="lead">SOIE MAN и SOIE KIDS нужны не для того, чтобы «закрыть аудитории». Они расширяют сам мир бренда и показывают, что стиль SOIE существует в разных сценариях.</p>
       </div>
-    </section>
-
-    <section id="visual" class="section ivory">
-      <div class="section-number">04</div>
-      <div class="section-copy">
-        <p class="eyebrow">КАК МЫ МЕНЯЕМ ПОДАЧУ</p>
-        <h2>Интерьер остаётся правдивым.<br><span>Характер создаём камерой.</span></h2>
-        <div class="visual-grid">
-          <div class="visual-card"><img src="./IMG_6443.png" alt="SOIE visual 01"></div>
-          <div class="visual-card"><img src="./IMG_6447.png" alt="SOIE visual 02"></div>
-          <div class="visual-card"><img src="./IMG_6478.png" alt="SOIE visual 03"></div>
-          <div class="visual-card"><img src="./IMG_6520.png" alt="SOIE — телевизор с Ortaköy и фирменным логотипом"></div>
-          <div class="visual-card"><img src="./IMG_6597.png" alt="SOIE visual 05"></div>
-        </div>
-        <p class="visual-note">Не переставляем мебель и не выдумываем другой отель. Чтобы кадр захотелось разглядывать, добавляем жизнь: движение, человека, отражение, жест, ткань, неожиданный ракурс или одну культурную деталь.</p>
+      <div class="statement">
+        <strong>Правило для всех героев</strong>
+        <p>Никакой постановочной luxury-позы. Всегда есть действие: идти, ждать, собираться, смотреть, поправлять одежду, останавливаться на детали.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="istanbul" class="section">
-      <div class="section-number">05</div>
-      <div class="section-copy">
-        <p class="eyebrow">СТАМБУЛ БЕЗ КЛИШЕ</p>
-        <h2>Город должен считываться<br><span>не через декорации, а через память.</span></h2>
-        <p class="big-copy">Не фески, кальяны и «султанская» театральность. Нам нужны знаки, которые человек узнаёт почти подсознательно — и которые остаются современными.</p>
-        <div class="sensory-grid">
-          <div class="sense"><i>01</i><h3>Орнамент</h3><p>Фрагмент узора, геометрия плитки, линия ковра, текстура решётки. Никогда не весь «турецкий набор» сразу.</p></div>
-          <div class="sense"><i>02</i><h3>Звук</h3><p>Чайная ложка о стекло, городской гул, шаги по камню, паромный гудок вдали, дождь по окну.</p></div>
-          <div class="sense"><i>03</i><h3>Жест</h3><p>Поправить манжету, открыть штору, поставить стакан, затянуть пояс халата. Человеческое действие сильнее постановки.</p></div>
-          <div class="sense"><i>04</i><h3>Материал</h3><p>Латунь, дерево, камень, ткань, стекло. Память прошлого можно показать через фактуру, не превращая кадр в музей.</p></div>
-        </div>
-        <div class="istanbul-list">
-          <div class="istanbul-item"><b>Узнаваемо, но не открытка</b>Отражение парома, след чайки, тень минарета, красная линия трамвая, мокрый камень, газетный киоск, стакан чая.</div>
-          <div class="istanbul-item"><b>Современный контраст</b>Чем историчнее архитектура, тем современнее одежда и пластика героя.</div>
-          <div class="istanbul-item"><b>Один акцент</b>В кадре достаточно одной культурной ссылки. Если она считывается раньше человека или отеля — её уже слишком много.</div>
-          <div class="istanbul-item"><b>Город как ритуал</b>Выйти утром, вернуться после прогулки, оставить книгу, снять пальто, открыть окно. Стамбул существует между этими действиями.</div>
-        </div>
+<section class="navy">
+  <div class="wrap">
+    <p class="eyebrow">05 · ДО / ПОСЛЕ</p>
+    <h2>Интерьер остаётся тем же.<br>Меняется подача.</h2>
+    <p class="lead">Каталожный кадр нужен и остаётся. Но в Instagram рядом с ним появляется человек, движение и сценарий — и пространство начинает работать эмоционально.</p>
+
+    <div class="before-after">
+      <div class="ba-card">
+        <div class="ba-label">ДО · пространство как факт</div>
+        <div class="ba-media"><img src="./IMG_6478.png" alt="SOIE catalog interior"></div>
+        <div class="ba-copy">Показывает реальный интерьер и помогает понять номер.</div>
       </div>
-    </section>
-
-    <section id="characters" class="section story-editorial">
-      <div class="section-number">06</div>
-      <div class="section-copy">
-        <div class="story-intro">
-          <p class="eyebrow">ГЕРОИ SOIE</p>
-          <h2>SOIE — современный бутик-отель<br><span>с памятью города.</span></h2>
-          <p class="big-copy">Задача Instagram — не просто показать номер, а влюбить в стиль жизни SOIE. Мы показываем не только интерьер, а историю проживания внутри него.</p>
-        </div>
-
-        <div class="story-board">
-          <div class="story-woman">
-            <div class="story-copy">
-              <div class="char-tag">SOIE WOMAN</div>
-              <h3>Не девушка в красивом отеле, а героиня своей поездки</h3>
-              <p>Халат, движение, свет, чемодан, сборы, жесты — именно такие детали превращают номер из каталожного кадра в живой сценарий проживания.</p>
-            </div>
-            <div class="story-photo">
-              <img src="./IMG_6443.png" alt="SOIE Woman — утро в номере" loading="lazy">
-              <div class="story-caption">Утро в SOIE — тот же номер, но в нём уже есть жизнь.</div>
-            </div>
-            <div class="story-photo">
-              <img src="./IMG_6447.png" alt="SOIE Woman — приезд и чемодан" loading="lazy">
-              <div class="story-caption">Приезд / сборы — отель становится частью самой поездки.</div>
-            </div>
-          </div>
-
-          <div class="story-kids">
-            <div class="story-copy">
-              <div class="char-tag">SOIE KIDS</div>
-              <h3>Семейный контент тоже может быть стильным</h3>
-              <p>Это не обычная family-съёмка. Мы показываем детей как часть эстетики бренда: немного fashion, немного иронии, культурная деталь и характер.</p>
-            </div>
-            <div class="story-photo">
-              <img data-b64="./assets/live/kids_stairs.txt" alt="SOIE Kids — лестница и движение" loading="lazy">
-              <div class="story-caption">Лестница / движение</div>
-            </div>
-            <div class="story-photo">
-              <img data-b64="./assets/live/kids_bath.txt" alt="SOIE Kids — зеркало и детали" loading="lazy">
-              <div class="story-caption">Зеркало / деталь</div>
-            </div>
-            <div class="story-photo">
-              <img data-b64="./assets/live/kids_corr.txt" alt="SOIE Kids — проходка и характер" loading="lazy">
-              <div class="story-caption">Проходка / характер</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="series-note">
-          <article>
-            <div class="char-tag">SOIE WOMAN</div>
-            <h3>Женщина — сценарий проживания</h3>
-            <p>Утро, сборы, возвращение, одежда, чемодан, жесты. Через неё продаём желание прожить SOIE, а не просто посмотреть на интерьер.</p>
-          </article>
-          <article>
-            <div class="char-tag">SOIE MAN</div>
-            <h3>Мужчина — современный городской ритм</h3>
-            <p>Сдержанный fashion-код, движение, детали, путь из номера в город и обратно. Чем историчнее пространство, тем современнее пластика героя.</p>
-          </article>
-          <article>
-            <div class="char-tag">SOIE KIDS</div>
-            <h3>Дети — стиль без family-клише</h3>
-            <p>Не «милые дети в отеле», а полноценные герои бренда: характер, одежда, ирония и одна культурная деталь вместо костюмной стилизации.</p>
-          </article>
-        </div>
+      <div class="ba-card">
+        <div class="ba-label">ПОСЛЕ · пространство как experience</div>
+        <div class="ba-media"><img src="./IMG_6443.png" alt="SOIE lifestyle"></div>
+        <div class="ba-copy">Герой, движение и момент превращают интерьер в желание прожить этот опыт.</div>
       </div>
-    </section>
-
-    <section id="before-after" class="section before-after">
-      <div class="section-number">07</div>
-      <div class="section-copy">
-        <div class="ba-intro">
-          <p class="eyebrow">ДО / ПОСЛЕ</p>
-          <h2>Интерьер остаётся тем же.<br><span>Меняется подача.</span></h2>
-          <p class="big-copy">Booking помогает выбрать номер. Instagram помогает захотеть этот опыт. Слева — пространство как факт. Справа — пространство как история проживания.</p>
-        </div>
-
-        <div class="ba-pair">
-          <div class="ba-card">
-            <div class="ba-head">ДО · каталожный кадр</div>
-            <div class="ba-media"><img src="./IMG_6597.png" alt="Ванная без героев — до" loading="lazy"></div>
-          </div>
-          <div class="ba-card">
-            <div class="ba-head">ПОСЛЕ · сцена с героями</div>
-            <div class="ba-media"><img data-b64="./assets/live/kids_bath.txt" alt="Ванная с героями SOIE Kids — после" loading="lazy"></div>
-          </div>
-        </div>
-        <p class="ba-note">Ванная остаётся той же, но с героями появляются характер, движение и жизнь.</p>
-
-        <div class="ba-pair">
-          <div class="ba-card">
-            <div class="ba-head">ДО · пустое пространство</div>
-            <div class="ba-media"><img src="./IMG_6478.png" alt="Коридор без героев — до" loading="lazy"></div>
-          </div>
-          <div class="ba-card">
-            <div class="ba-head">ПОСЛЕ · история внутри отеля</div>
-            <div class="ba-media"><img data-b64="./assets/live/kids_corr.txt" alt="Коридор с героями SOIE Kids — после" loading="lazy"></div>
-          </div>
-        </div>
-        <p class="ba-note">Коридор сам по себе показывает интерьер. Герои превращают его в experience.</p>
-
-        <div class="ba-feature">
-          <div class="ba-feature-copy">
-            <div class="char-tag">СЕРИЯ · SOIE KIDS</div>
-            <h3>Один удачный кадр — не система.</h3>
-            <p>Сильный визуал рождается из серии: один и тот же характер бренда проходит через лестницу, ванную, коридор, номер и город.</p>
-          </div>
-          <div class="ba-feature-media"><img data-b64="./assets/live/kids_stairs.txt" alt="SOIE Kids — серийный визуальный язык" loading="lazy"></div>
-        </div>
-
-        <div class="usp-strip">
-          <article><b>Booking</b><span>чтобы выбрать номер</span></article>
-          <article><b>Instagram</b><span>чтобы влюбиться в стиль жизни SOIE</span></article>
-          <article><b>SOIE</b><span>мы не гонимся за трендами — мы создаём свой визуальный язык</span></article>
-        </div>
-        <div class="system-line">Нам нужен не один удачный кадр, а крепкая визуальная система: женщина, мужчина, дети, приезд, движение, детали и жизнь внутри отеля.</div>
+      <div class="ba-card">
+        <div class="ba-label">ДО · деталь продукта</div>
+        <div class="ba-media"><img src="./IMG_6597.png" alt="SOIE interior detail"></div>
+        <div class="ba-copy">Чётко фиксируем качество пространства и реальные детали.</div>
       </div>
-    </section>
-
-    <section id="identity" class="section">
-      <div class="section-number">08</div>
-      <div class="section-copy">
-        <p class="eyebrow">АЙДЕНТИКА</p>
-        <h2>Премиальность без тяжести.<br><span>История без театра.</span></h2>
-        <div class="identity-grid">
-          <div>
-            <div class="palette">
-              <div class="swatch s-navy">NAVY<br>#000A24</div>
-              <div class="swatch s-gold">GOLD<br>#D1A447</div>
-              <div class="swatch s-ivory">IVORY<br>#F4F0E7</div>
-              <div class="swatch s-stone">STONE<br>#C9BCAA</div>
-              <div class="swatch s-burg">BURGUNDY<br>#6E2430</div>
-              <div class="swatch s-walnut">WALNUT<br>#3B2A22</div>
-            </div>
-          </div>
-          <div class="type-stack">
-            <div class="type-row"><b>PRIMARY EDITORIAL</b><div class="bodoni">Bodoni Moda — desire</div></div>
-            <div class="type-row"><b>LONG FORM / ATMOSPHERE</b><div class="cormorant">Cormorant Garamond — memory</div></div>
-            <div class="type-row"><b>ACCENT</b><div class="prata">Prata — signature</div></div>
-            <div class="type-row"><b>FUNCTIONAL</b><div class="manrope">Manrope — clarity</div></div>
-          </div>
-        </div>
-        <div class="identity-notes">
-          <div class="identity-note"><h3>Логотип</h3><p>Используем как подпись, а не водяной знак на каждом кадре. Бренд должен становиться узнаваемым ещё до появления логотипа.</p></div>
-          <div class="identity-note"><h3>Цвет</h3><p>Navy и ivory — база. Gold — точный акцент. Burgundy добавляет глубину и fashion-настроение, но не должен превращать ленту в «винтаж».</p></div>
-          <div class="identity-note"><h3>Текст</h3><p>Коротко, уверенно, без перегруженных рекламных формулировок. Заголовки могут быть почти журнальными.</p></div>
-          <div class="identity-note"><h3>Ритм</h3><p>Крупный кадр → тишина → деталь → движение → продукт. Лента должна дышать, а не пытаться рассказать всё одновременно.</p></div>
-        </div>
-
-        <div class="intensity">
-          <p class="eyebrow">КУЛЬТУРНАЯ ИНТЕНСИВНОСТЬ</p>
-          <div class="intensity-row"><strong>0</strong><span>Чистый современный lifestyle.</span><span>Работает как нейтральная база.</span></div>
-          <div class="intensity-row"><strong>1</strong><span>Одна деталь: материал, орнамент, звук, аксессуар.</span><span>Оптимальный уровень для большинства контента.</span></div>
-          <div class="intensity-row"><strong>2</strong><span>Деталь + архитектурный контекст.</span><span>Использовать точечно в editorial-сюжетах.</span></div>
-          <div class="intensity-row"><strong>3</strong><span>Очевидный исторический образ.</span><span>Избегать: слишком быстро превращается в костюм и туристическое клише.</span></div>
-        </div>
+      <div class="ba-card">
+        <div class="ba-label">ПОСЛЕ · деталь становится частью истории</div>
+        <div class="ba-media"><img src="./IMG_6520.png" alt="SOIE welcome screen with Ortakoy"></div>
+        <div class="ba-copy">Ortaköy и фирменный экран SOIE связывают номер с городом без «султанской» стилизации.</div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="feed" class="section feed">
-      <div class="section-number light">09</div>
-      <div class="section-copy">
-        <div class="feed-header">
-          <div>
-            <p class="eyebrow gold">INSTAGRAM SYSTEM</p>
-            <h2 class="light">Лента должна выглядеть как<br><span class="gold">журнал о жизни внутри SOIE.</span></h2>
-          </div>
-          <div class="feed-tabs">
-            <button class="active" data-feed="desire">DESIRE</button>
-            <button data-feed="product">PRODUCT</button>
-            <button data-feed="rhythm">RHYTHM</button>
-          </div>
-        </div>
+<section id="motion">
+  <div class="wrap">
+    <p class="eyebrow">06 · REELS / MOTION</p>
+    <h2>Видео должно ощущаться как жизнь,<br>а не как рекламный ролик отеля.</h2>
+    <p class="lead">Используем все видео из репозитория как часть одной системы: движение, пауза, близкая деталь, проходка, неожиданный ракурс. Не клиповая суета ради тренда.</p>
 
-        <div class="feed-layout active" id="feed-desire">
-          <div class="phone-feed"><div class="feed-grid">
-            <div class="feed-tile"><img src="./IMG_6443.png" alt=""></div>
-            <div class="feed-tile"><video muted autoplay loop playsinline src="./-4450041590053018789.mov"></video></div>
-            <div class="feed-tile feed-txt feed-navy">SOIE<small>ISTANBUL</small></div>
-            <div class="feed-tile"><img src="./IMG_6478.png" alt=""></div>
-            <div class="feed-tile feed-txt feed-ivory">THE CITY<br>IN DETAILS<small>MEMORY / MATERIAL / LIGHT</small></div>
-            <div class="feed-tile"><img src="./IMG_6447.png" alt=""></div>
-            <div class="feed-tile feed-txt feed-burg">MODERN<br>ISTANBUL<small>NO COSTUME</small></div>
-            <div class="feed-tile"><video muted autoplay loop playsinline src="./-5700102579430439523.mov"></video></div>
-            <div class="feed-tile"><img src="data:image/jpeg;base64,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"  alt=""></div>
-          </div></div>
-          <p class="feed-copy"><strong>Логика:</strong> сначала желание и характер. Продукт встроен внутрь истории, а не существует отдельным каталогом.</p>
-        </div>
+    <div class="motion-grid">
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./-4450041590053018789.mov"></video>
+        <div class="motion-copy"><b>Движение</b><p>Камера следует за моментом, а не демонстрирует интерьер по чек-листу.</p></div>
+      </article>
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./-5700102579430439523.mov"></video>
+        <div class="motion-copy"><b>Близость</b><p>Фактура, руки, ткань, отражение, короткая деталь — то, что хочется пересмотреть.</p></div>
+      </article>
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./4289855894515363739.mov"></video>
+        <div class="motion-copy"><b>Ритм</b><p>Чередуем человека, пространство и город. Не превращаем профиль в сплошную стену комнат.</p></div>
+      </article>
+      <article class="motion">
+        <video autoplay muted loop playsinline preload="metadata" src="./70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video>
+        <div class="motion-copy"><b>Атмосфера</b><p>Кадр должен оставлять ощущение SOIE даже без текста и логотипа.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-        <div class="feed-layout" id="feed-product">
-          <div class="phone-feed"><div class="feed-grid">
-            <div class="feed-tile"><img src="./IMG_6447.png" alt=""></div>
-            <div class="feed-tile"><img src="data:image/jpeg;base64,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"  alt=""></div>
-            <div class="feed-tile"><img src="./IMG_6597.png" alt=""></div>
-            <div class="feed-tile feed-txt feed-gold">STAY<br>WITH CHARACTER<small>SOIE</small></div>
-            <div class="feed-tile"><img src="./IMG_6443.png" alt=""></div>
-            <div class="feed-tile"><video muted autoplay loop playsinline src="./4289855894515363739.mov"></video></div>
-            <div class="feed-tile"><img src="./IMG_6478.png" alt=""></div>
-            <div class="feed-tile feed-txt feed-navy">ROOMS<br>ARE ONLY<br>THE START<small>ISTANBUL</small></div>
-            <div class="feed-tile"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABMNDhEODBMRDxEVFBMXHTAfHRoaHToqLCMwRT1JR0Q9Q0FMVm1dTFFoUkFDX4JgaHF1e3x7SlyGkIV3j214e3b/2wBDARQVFR0ZHTgfHzh2T0NPdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnb/wgARCAHgAPADASIAAhEBAxEB/8QAGgAAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EABcBAQEBAQAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAeJp8908w1MqKExDBJoAAAAAaABghoBgiqiHv1S+U09QAEBYhodQpdTJlk0CYAgAAaZTiilWkq7o6c1vj4rMQNQABMEBYhoQ0CYDkNDNy2JjAG04dw115zNKUuqBiGUgEE0CYIAEwQAhggFemWkKLyNqxZrEsQyymnKAgABNWAAgAAAAQEIBTTPQnPTMbTsBBQVDaaoasAAAEAIYIAAJUNCADTPQWWuYDLEqRQI0BDEDEDEAAAAgAAlE0AAXFii5AASpWVFyXlc2BsWYPokydKVBJZmS6GdFEhSCUAC4sU0gAEqlLi4oB2b0maRalM9kuI9LMywyjebMJ6Ec66FGNS5XcXKTSgTKU0ipqApVZ0OnnUrSSdMt5ebfPUkallNaiWiTNWbxxsJXeekoDlSpEoVlxcgGOp01yEdm3ndEvTtjWbnGU6necnXz2K86ayNZ0mVrPOJjuLlLjXNmdMyJpalTUBz9PNrJNaVk6E3057zoLmVep5t5d2XNOd9JgzbPONSKzveKvPSU2x0zqsbkibjWbipHhvjrIUqhXIx6RmtIH0ZehnXK+nPOsp1VmK2NZ5bTDXLWV7Y9fPddGe3PUeT7Hl7mCa683jthrNGhWa2kxpyVLk36+SMa7okmgmbmyDWc6mpTXLSV78/TjXRrxY416XBzzvLVRvNYb8+s2lVhLkYqFIGkVkutZUU8dUlTJrrlrnT0z0lOvlzzrtwhws9I1Kz0zsrm6ubWVebsEwolkthWWgs0wyrQjF7MjQcppnpK9MMZeyOaTpjnrUqYVz2pksLREFhBYSUElBJQJUEjBABpncsc/Ry6lJFlgoSas7gM6EwQ0AAACAAAAUoCsAAuKlnl6ebWRp2NACA7WnnQACAABAhiAAAQNCGgC4uWObriznO7Y8u/X0zfFj6CpfJaN5AAEAIAQNCGKyDVmL6Kl570CbCUYDaIqsxd3g5eNo6cwAEWZnRZzXujN2pQARQSMAAGAASgACBhqcB2bWcOvSjM0DFbIypggBDCRghghghgAyW0K312ZRrhL1kaZqlkszaqJtJE2qhWrIKkABDBFAmgaGJO66C8tZ1yvnzevDeVJz0zWkEywSasBhCtEjZJSEAIpCGg6MerUeZpc54dPLNdgnZOHQpUstohaTLKqQaAHI5pkDCRoCppDRttNazlrFJnhU511uXrLBkY9EzQs9oidJlQwmdIJoBKikmyHYZumm+emWs6TeJg1edbVL3mhMYEs5brNJjUkpSyMILRDtkFIlUE6RrZLjTWTl6OWV2mulS9ZpyyhOGBLGe8Ssy2JTcqbQJgk0IQO5Wslp2YZszp0VYPn31KqKG0yhEMHLGe8qMZIyEClSpEKpl0mo6Y1zvEytXmsqLOHs4rO6sr1mqi1HFjE4aBWBCGlSZEhMqcOXVTfTC5enKHSQTPMf/EACUQAAEDAgcAAwEBAAAAAAAAAAEAAhEQEgMgITAxMkATIkFCQ//aAAgBAQABBQKkqfVGaVPlhBhTcLZlTvxRolNwwtBuyp3JQWGEU7HaE/Fc/wAE7fyFqLy7yzsH1HhSp9Z49p49p4yj0HjKFPnOYeg5h6DmFdZ+y1VyuHhOYVbzUhWBWKwqHLVSp8AqzkKFEt/I+9IraFY1WK0qHLVA7Qrh80BgImCncgUjP/WyKFYXMVlP6p3bNCih7bIoVhc1tWIPqndyjkikUd32RQrDP2LjLXpmJKY+44lHmHfLryoVq/JU1d32RQqYddpcryEx4CeZGLoxzriEx1qa7Qk0JyHtmNRQo85A4p2I51BTCgYbkdFrUo9sgRyChR5rFAtEOVfA+Ur5SvnK+YL5QjioZ4Kg0FCuTaorKuVyuKkoYbyPiK+MKwKwKwL4wog5IWGK4mjxQr9qU1TIdRoTDocx7VHKagisfuKFfuX/ADnT+lMCVK0yf1klN4pjoUK/Q5Srk4zQ8L+phYh0a6RklfuSxFq4qKFf1cVJUnKOQU7VB2lxVyklXFSm5ZUp1RQo80NBy6pigR1KbIBBFG5By/th6B1RQo8ptfqvrQGFfS4q80k0hNGeCoKOivVxRTuaQoUKFarVaoUKFChQoyfpMC8q9yvctTsQo8L+tR6ndfa7r7Xdfa7rktKtK/fMQSBhOQwEMJiFoUoKGnx2lWK0UnNKnetKsVigea0qxWBWj0WlWKMseEMqGOKGGoyR42tlaNFwKGCrQKaq1Qo8jRJ4QFytC5VoUKFHmaID+AnaGbfS0ap2pmFMk6rp6GDRNTqldPMBqnocO4qV08rBTl6ecpC6HYKG03g6BvCOYrptmkZRynUPGeJXQo5zsNFBqU/ZiUPpsxnCcdBwnGTskSgbdiNg6uTjptkSgY3RRtH7rhKBjcCdwNKHU7pEoGNmaDjlydxkY7bInbGibR51GVpkZBumjeTwOKAZQYQOg3/00aiZXCdwKl0IkuX/xAAfEQACAgICAwEAAAAAAAAAAAABEQAQIDASQAIhUGD/2gAIAQMBAT8B3L82acce5RRRalFiaGbgNj3FDFY0j1OQnIQkWNPiIhiK8swVHiI4TrFDA5qK3HH3D0OM4zhvfQUWxwbxT1mh8o0Np+F//8QAHxEAAgIDAQADAQAAAAAAAAAAAREAMAIQIBIhQFAx/9oACAECAQE/Abnerh+8NKKKKobcccdTj5Gj2oRs/EB5PA5yBIgwM85QA7MFGRUZj4y1h/eyHFzlFBjoUnRD4HTjj2nPMUVgvF4noT3Pdyi+g47FDedKsaP5Q0bR987/AP/EACcQAAEDBAIBBAIDAAAAAAAAAAEAMUAQESEwIEFhAiJRYDJxUHCR/9oACAEBAAY/AvuvwF7crJl4WT/R4nCcJwnDWV0mgjWeLJynXSY6hrNMK+hkycp6NUazW1L0Ec8xsGs8/TqO0qyzUfunp8LwhYiyxzMG/a9P7pfg8geFngE80YTrqnaYrA0Mm339qcf5vOkq+swjQK1MmAOIwu03MIaBGauOIg9VfiyzBe1c3TGjXX4ji+rM55InCcP5wc2KYxhTFMlMuvvea/CzVo7rMy5p8TrFpduGWlX4+J9up/if4iW1+Id9mWn2M+xn2M+x+yXVho//xAAoEAACAQQCAQUAAwADAAAAAAAAAREQITFBIFFhMEBxgZGhseHB0fH/2gAIAQEAAT8hJdKR8p5yT6cckkyPqzWKwQIvHeb54JkSfTkkim6FNTJYC7N+nI8yfSQhBi5GSV2gtqT70dEdI360s8yV6CERZD2XOu/Yy0JCaT9kr4FW+sm/aTimYTE5EY679p1TOIms137To3Sis8N+1PNaeJG/ann0L8DftNh5MOW/tth5MOW9N8J9hsPJh6FkupPB8GJ3f6LMpr6PIhMkkn09h5MOZjokpItIkJeUicR0j7On9oi7EitymvlEe0SSTyPI8csRjo7H2NYl7dPQ4iaGvuQcYtJFh0QQNmUH/kI6QNWE+0QaT+yUyxJU8jxyxo6NCwTnYd0IlMixZ89BqiKQQQNDyptDyPHoyfx0RSExKIq7bIkmo1KIUEEl5Gxzuo0Z/qp5HjltV/XFSJosJ7MfFCluxHoSY7MUnYg8ho/oU6HkfB54kHkLQLT2Q14gkLMeVQk7HjaCmRzcaYtTuzGSHBkUNCUNn9CnQ8jIo+Urkdy7uSlXEy4aY7lZtEADO6nL6LgtaBovk7MzqRjXTGRDZDZyRbJgZn+qdGxkEcGA6uZVE1KtYbuJLCGlWOtLqpq5E7TBdP8AQZwgad7gae/6Gp7IaMtOjdGGHyswsLyxeYLJkW1chwh4V1RbejQoxLZE/QbruX0d42ZDoivLdOjdXcm2/Boy35TepqUgRWx/LJhjfRLob6FoJ9IvMn0dooMw3R8R4mfIXKp0PIs0wSxIYkPzwN6sSw95dSZBQoEsqMbsQXpz5G6HRuNkqB1XQzBTGokT7XA3rodyIwG3BC+QIEk7fgn/AJAetiGIHdgnqaNoeVOjYs04BOw2ZNwHmQJNNjlqRLu/BvKDRrQsI8SwSq/T6APuCU/HgaTU/wDI4SyX4aZvU80UsiVhl2ct4L9v9qeaHkWbMUkyy5Msl7uJkklkjwyM2uRdnY1PofihSrrCmGzybVPJs8hyw1+mI4mmFWeiiJabuWMbLkQkJfwTpseFvwtDGiB7lGeh3JgETTenRswCtuI2yYDphxTXKaK3YJrNzq44lxgU10EKKQoQ2pqbPxSfb9LvJIYpmnQ8iySNOLCZMP5JXiEdrG2rHmoS+kMkSJk/SHCEU2hi8HgR1OBs3JZljqxogipBBBBBBBBBHI8mTh2HXftNh5M3vNh5MxsjyY9ztDyZjfvDyZuCuJuPwO78CI9q2HkeUjGswhGz6EO3yJhSfCFZZfpdm3wbin5N+xSbwhEuzEUJaIE+C/ZH2JwJi9bhvCEzRLbEnkStUlFy/ZHGSSSfRTNHkxAkaVJSyT1Jfoh9/hC9kneBLu4oYVJ6uQ/CI8sh8kR66TeKB2JnCbNAvkJ2kSrA4RPQh9/hD/32cnwNdAhYCv8AAlLJItq/wiOkF2W2RWFRBBHsmSQhP6C88kPCzzk+x+R0GIGqQQR6scIscxgW6J3y6Pqkk1fyOOD4wRSOU3wEWKGRkpWIkhibaPh8UmavjBFII4RSOEAbhNi5YWzFRJUMltD/AMmqMngh0arHoSIhIayQkIhL+CSoFLS/yZpHBU3SCKtEGK/BkdP4DZajjIoFMDv/AFMqkEUiknhQ0QRTBkZiiQGkFoeXNOhVRNXFLXuxZ3yNDsqwQMRIgmXF1k+DKoiaCQzbWxEQWtXoR1VokMTdwZEpFWiBLCdrjUkNCkikFyaXtL2SqscngYzaP8P8pHBqjogjvitiL5ixCkgxV65YBM1a8f5ygij4I4ow9I2QPRV0jYhcIxP06fRsXDHKCEmFIuXR7wKiNH/ZuizwYlB38RvVGK5jg6OSKHwEhFHkYhI0LDNG6bHxjj306ZF/QULMd8ZHmQ/xo8fI2JCQySzz/Z0bpsYqKqYT6GB3zkfjJYubMRJ8KEqMTp2kzXEvR2OhsuK3C2mDLIBtDcjcUnz+kn8jCiwLNFmjYuSoeETYdQ8TDCMBocRIbbopDwSP/9oADAMBAAIAAwAAABDprqyhT6rJbIaVNc4K2Wba5o76plQ2hYpKmWVn1LAUOlt5LA1VGlG3FTzUkrFYbpUGkEGvaron1srW0GnG06b65b3LnWH0HGH35YZbw7FkkeWLUokVJZ7m7c2Mb3TKKRFuXZNlIaL91ItuW8mL4Lo5IBsMNGcGa0lYdto7YiEHIeXMGUqhz169ThftlFpKGpoPjG8CSzjLSYGG62vkGpNOsOyAU/eLRvJD4rPv2SQaPkpCZw8/b/0lFFHn27DQLVVnU0GmEYXGYvNl/wBhdh1JxtFd+mxrTFxJppVJ1COy1D0Imye1tW2z/wDYXjjmrjSeax6ecd8SZ4Xr3+S2sdbf07mnEJlFiulbuunrstlE3LGH5h9tvmvnBEJ/lgVF/wC437zTCU9nqRQTuWaFnudvKPfCQhKYe0s4kG18vbKyzwfoDjk7ZIxj5KY2ghMALCu4aB/K3//EAB4RAAMAAwEBAQEBAAAAAAAAAAABERAgMTAhQVFh/9oACAEDAQE/EPWbrukcL43Vv0WL6r3Q/ZasVlYQVF0WrIS4q2WNkR4XBapVkHwLov0+0f8ABBnAhaWM6P8AQ/WV3p8BxxFPBcFg8s7hNi6Mm+jKv6f1CFgx4eUMp0ahpDSFwQtRw4w9g6Gyi4IscFVMPNw2UrxwIaIbqHqhGQmRCEiGoxX5ob+l9V7kNNsTMX+/FCHzS6p50rCE8nB9C9WMUQpfFsqUpfF4XzCeVhD0eF0eVheQ9E83XrHEPVMpdX0XR4a3WEPg1BZ//8QAHhEAAwACAwEBAQAAAAAAAAAAAAERECAhMDFBUWH/2gAIAQIBAT8QxOuj1Qm7Y3RM+maoTreJ2sXcxdz1QiIxoomj3JtPkRcokgqIhqMetiKIfo/OB/DicsX6MI9DGLMqPB/AvCIp4LVQ1+iiKP0YwtFmGl6XgmkI8Mh8PwDHkTwssXg5OBOEwmx+jGjG6xgha+IUCRB+jI+ism7RbEuSERD0MoglGIWVKioq0D5GNwmEY62JwTtZ57mMkhqG3xH9ropTnEJsXphCEYUvUqOA7ldSEIMQnSmUxCYW6w+XhrLwxaLD8Fl4a6haNZmvjD5YtWiEHovBuISGJ7tEGL0Tuj//xAApEAEAAgIBBAEFAQEBAQEBAAABABEhMUEQUWFxgSCRobHwwdEw4UDx/9oACAEBAAE/EF0d4Fp+8O4nIS4ypXj7TPDMNx+n1LELTcqV0vv9IQgTHZ1SCNLANl+oLtp8wRiXKqJ4+0rtme/qyQi7ldFEDoLxFwR3UEpEdPnrXRjBdFIBvME3j3AJY9E8yvifmX9QiAcQCR7JW4sgLCQgKzDi2L4yOnz9T1SGNNQDzAeEA6Y0yprxLl9K6biTTO8TThmV5iNIcrRAXyFj/plgIesfaOnz0fpTo9amvEC5v3AcKgmmVK+Z+JT2+0IQOhVC2BTV5l1B5Zd9HT5/9q6VDUfvFb3DsfvLORPJKYyW74YiXmnDEJY3CXFSoktJ5x0+frer9NSutpBmHMKdw1RjUc5gt0wTeIrMNwZj0dPn6n/0Oj/fmXTH+CKEXBTUvzmWMZw+fqf/AEOj/fmOnqbviMBLTpu4QJx+f/xHR3/OZp9TZ7OgucyzySu2ZU1YMzj8x6P0v1V1ZXR3/OZp9TZ8SoHSumjBjHD5/wDR+h61H+Pc0+oc5UCVOZU09ujs6XL6Mv8A8mMOn8fM0+pvlQIxOmkMXCLLl9Fy5fS/rYw6P8e5+noB0elYmj7jFSSrMKYS5Z/QUlX7QZT8iUE196W6b+gDLly5fS+h0f49zT6myHRnPQ4fc2jzDfxzhcFs8SrqLV01NsvZHhD1iP8A2BENDB2j5KhTbV4zEfkQQXX3oddcuEY7/nM/TN3VnPTZ7m0eZn8UZegKpHklU15bP+vctLg1UJsmDV+IgIXpXxO4U94KQ74mSKaj0NyfYRGqPkkS/cXNkof4NScR+swL1dmxK6c/zmfp6R0Zz02e4zeC/j/2ALsu4qQc7l4XXYyhBvnzAlYsywDlxLCDCv1E21Uo4vyRwyMVwRK3Fb4lOowPwQn8/M0+ukHRjvpo+49Fn8uYWlgriB3CA3guiKpSwrM5DIxH2jxvtG5VjKObbMwKJXplaKS+IllBZ4hWdO00xqNOgK9MEd/zmafXWqMd9Z6FV/b/AFKQp7SomaYumxeJQIVSSgAUAqqzOLpXiNSrVmCKKFhMrxvxG7s+IrGLZ3l9RRg1BLavoGvRBHf95mn1NJUqJ1NX3HoA72Z+8zhV6SMnmPHMQ2W5CPUJMIuCJglUNMqrcktGpa1ysoWKikK77iz6LvtP7iGUVFAVbFDAqQLAL3ZmUKpruxeMziGp88V+iCO/7zNPqadCTGO76aPuPQ7UE5HmA2WrF6hUIA2hKylyURijoU7+YRKXTXGIVQIDa6lICDBzLqmlXXbMcNA8VAe8arFPd96mQfgRUtsv2BWjF/MKUbJy7noPzMzNz8GCO/7zHX1NIWjDzUem73NuhUqiVEt4e0Gv+QLatl7lCp3j4hM2woC+03LEpXdDdZuIN24XtMzOBKMbg4bEwxDkWLjm2KgpTC4N34phcEjL5ZaKQA0g7AQA2JxXghOf7zH9Y6lGGY8TaO+iw+476GF0piS4EdNu0rVKbhUqXmol3GyCVd5zuNjFdtRUAVfPqUeEGkOwsX3TL2wrSCR4BDT7H/IW4FeLJlD91w5hXzRBRFGtrFY7oIR3/eYmPqMFJbAF9R0l+UUwfa6f4R6BtcQjwlDQGL1MTSBV1ANaEO4xzULpXNQegeKxCsfcIYQK5s/qN2F4LSkB7gKiLQV94ryYvwfMRGj7oAq6xuEd/wB5mj1BY9w8Je71Es+8M+UH3zHl6z8cuXmUbKuoyF3WYZTEFRL1AEJLrWBg3At4MTnOAmxsZuCIdOAQXOEVl3KQuyMM7RwE/MVFUz8AhHf95mxPyIUr7hD3ZVPmVJhWgf8AJu9d/Zm/ctuoF07QU1jvMas2Yp1EUEB3AdhTGNxeQjllUNGdsAFHH55nEV3xFmwPaRUFKcMEqKpyMyKqfNwmyfhkI7/vMdfUVB8zFcxPwRjlH5uG/bJs9eHqmUqoabQf+YggDGSzi24UUWClaSq/NX7jIVyWnyrLFjzzNGg7czGhcGLINNimHD37RavHJ2p//Zkxajb+JSnLffMCNou5hhOeaimundtlMEO075WDmEd/zmafUMoeYVl1Csw+5xYti2K3LfKOcqsO5snGOvRAKJXBUHsnm5fsvcbLdu7BPXaIRDUrVZxAB2QQRINW1UMLzAIAUqjuUxsdojXDyGZuwC7oxFq0+02i/ZcdvwhHf85mn1C0AK+I02DnKEAtit0GPKkzRuEbHOpWJsjvqA4Jg2ClDXEAAWYGn1MENwgLtagIwXDa+ZcEpbReWVASjjBDtl5dmKwFDF1xLhwJkKJTHSxZFy5+6Ed/3mOvrpKH0N68QCta7TcX5H7m8Wbo5ZrMXBxFMV5xsuV8sXEqDbyDBEG5N6PvGmNWwMfN4YHiUqhX4ly59GeItKhSALOj/wBCjdkvuCaGE0bYR3/eZp9R4zLkikoXiAinGKjZvuXCUzXwS7VR4j3UFsaFPaWcP2nhZ456p5iW7z2lPMDKdpTsSvaevTRChKn8/M/VGcg1wxssD4jXVLwEwT92pWCy91lQo0RjNiWR/wDDPOvOsqVDpz/OYsfU/S/cNRZfmc/hH0Y6f3EqVKlSpUqVKlfU9Dp/HzNfqfrfuLnoFtEKCjiPRiZPf+fTXSuj9b056fx8zX6n637m4DzBQxLi9XZ7/wA+ivqfpfoWfz8zT6n637moHq9DLHZ7/wA+h+i+rL+tnP8AOZ+mfqfuBllSoFUbm3XpMD1vamlr3HZ7/wA6PW5cvrfW5cuL9D/HuafUbiWbx72/1OavACO6vullOK9guYVt/CDBYOw/7HBP13HT3/nW5fW5cuXLly5cuXNoPojdge2f/FIKrFrVsNQEybt8Zg+F84lvgei4DlfZnAA9TPbE5hC5Pf8AkuXHpcWXFiy4sNgfROzPcOJPRA7V+I7YZidpt7GZnoD3K5L4KlXZfvMMFBUuDL6CDp8n9x9Cxem8G52YecQfY9EBu32zQF8SqI7QPbKui9Et6B7ZZuvpO8X7z9B9DLly5c5/u3S4wtaC2b8B5hd1fYhHAHiYq3BKOj6f9lvY+7L8/FiLbv2WB0A+JviVmJ0r/wAlaCsTf2ERsn8QSpjsEyyTyz9iAyn4EPoB6Isag9rzFOx8rUt2DxGS0t+UvokqVKbnxNz46V1qVK6VFspP2hu0vMKknmAzl4wJjQcspc/6b1FtD3bYsfCaPxANAeo+EfGMMV1qVE6XKhKh5JiVK8RiUcG4RQABAEXejwQz2Xa5wvlGXxx8yttHvZMBME8oEZo4iSkRGE6FTmPRL1KTU+J8MHsE3sJTiNeZnjMEDnmKwbcSoewmMaZZn+Vfj9esi9mKtHZMiOtxa5YiLDeYhxEzHcETESZJV8REw5ZT4Z6Skg/xPzK72RPNzNusoKxG6QOf71+40dgmQVGIAsm1z2/uvHHrWDO7hwYl+Y+Z4EavtPmYYkaEbSuEhOGpm5dbmHmW4ZmUXsxE3mZ4RI1KdduWG5oLjrsuPnn+8TVdNwWCxhzO0h/K8cb1rBhqXExo5i+Il8SpRgticdG85+8vMoxOJR6hZ2qYSOJdRB8RnCzvKiKByrdev/tQiOCBZ46auJBdGPEWyrIh+HjucbMa0EqnUqLVjvdTHeJi+msTsY1qUSqmLMjKuUeofKbRpIlagXlfDLmiuIHEG94/z/8Ab+0MUlAPOWbg4z3hm4wGRZFnCao+4/0+TkAAREcicyrY4ZnN4iXLQU2Sl6gN2GOynoqNxVQ7MbepQLmDTG1GrswysOazHRWQx7lSXKu/UWnMv1ywlxkQyEqKg2fqKrZV0H5P9Pk5IUUaJYmmUkGE3AOSEbRoQQIzalqVJlzAMKRGQysAslHJGUhYRAM3DTO5sIQ+V/8AP9fiBICgKjteImYEI0Ya9OiRgFkQFl5190/0+TmUUpsc3LTErNPRkykSyUQ6AtAD2Z2NvqXMNMtKa9yhvL0bShU8RKLcY3Goa/v8/cW55y5YZYEf2Tj3DZCESEMlbs2eSIar5vjzP5XqN6mTfeJxExAzLGA3UyfEAj3IJSsRq3tHPj1KqVCUCXw+Hxz+JRrbl9y52EvEOYQ0+pf3w38w3DbHglbhC2Hh7MbU81/A/wAPGniBWImYlzUHxG+YWvEOTPSvPQkSJcouuZgTA9z9v+RKi6G3BNsFTKztBv2w36Nvc5vzGJiFW1ehS/fxGzWVI34C9uz8OZygsWIZxK7MLqoBtHzEmuix5ROgNmbiiLQWywfa1/3+8R3Fp25YYEGJw8MugO0afuH+RfhNPzOYaggIQsOSxOz4imelpFvYL+nn3KKgyvMDwlAm5UqCJjtENZIWq+eLl7RKJWeS/iUPhn3HBbPIDBUsjiHZOyXl4pl/r0Neg2w0QySrhoNDVZLHw+JeNypHJ4X9P+zKK+0S25UrMqLmtylvvLyMoKVDUQ1samka3/v7U3Lc5wgX0GKa1Ho2JXpLwuEpnD0S8TjNYrhNGHRpC0/Xb1CcXHBXS4uajRiZdHJFShQgXTwlFNDcu37WLiYA1hASyBRFcqRGk0wVNPJ2Yr3hZLuxLtGOotwdx5ZeYbl2/qeCO/U8s4m2BfrHmiLHqWNzS5My/LWIB36uOC9sy922UjtAHmKvEMdHE5NDuQ8TY4Md0ZeX1ModSbZiicygo5grM0Ti+/RhBeZV+kzkQXcXFOwwW8xaot3f9qFRbBC7hwQy6tngiUBbM2fjllyZ7fLP/9k="  alt=""></div>
-          </div></div>
-          <p class="feed-copy"><strong>Логика:</strong> когда нужно усилить продажу номера, мы не теряем fashion-язык. Даже продуктовый блок должен выглядеть частью одной визуальной системы.</p>
-        </div>
+<section>
+  <div class="wrap">
+    <p class="eyebrow">07 · КАК СОБИРАЕМ INSTAGRAM</p>
+    <h2>Не один удачный кадр.<br>Крепкая визуальная система.</h2>
+    <p class="quote">Женщина, мужчина, дети, приезд, утро, движение, детали, номер и город — всё это должно выглядеть как главы одной истории.</p>
+    <div class="three">
+      <article class="principle"><div class="n">КАДР</div><h3>Есть причина остановиться</h3><p>Необычный жест, движение, отражение, ткань, персонаж или культурная деталь.</p></article>
+      <article class="principle"><div class="n">СЕРИЯ</div><h3>Кадры разговаривают друг с другом</h3><p>Съёмка строится сериями, поэтому один сценарий продолжается в номере, коридоре, городе и видео.</p></article>
+      <article class="principle"><div class="n">БРЕНД</div><h3>SOIE узнаётся без подписи</h3><p>Это и есть цель: собственный визуальный язык, а не набор текущих Instagram-трендов.</p></article>
+    </div>
+  </div>
+</section>
 
-        <div class="feed-layout" id="feed-rhythm">
-          <div class="phone-feed"><div class="feed-grid">
-            <div class="feed-tile feed-txt feed-ivory">A QUIET<br>MORNING<small>SOIE</small></div>
-            <div class="feed-tile"><video muted autoplay loop playsinline src="./70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video></div>
-            <div class="feed-tile"><img src="./IMG_6597.png" alt=""></div>
-            <div class="feed-tile"><img src="./IMG_6443.png" alt=""></div>
-            <div class="feed-tile feed-txt feed-burg">MEMORY<br>IN DETAILS<small>ISTANBUL</small></div>
-            <div class="feed-tile"><img src="./IMG_6478.png" alt=""></div>
-            <div class="feed-tile"><video muted autoplay loop playsinline src="./-5700102579430439523.mov"></video></div>
-            <div class="feed-tile"><img src="./IMG_6447.png" alt=""></div>
-            <div class="feed-tile feed-txt feed-navy">THE CITY<br>COMES IN<small>SOIE BOUTIQUE HOTEL</small></div>
-          </div></div>
-          <p class="feed-copy"><strong>Логика:</strong> визуальные паузы и типографика нужны не ради «дизайна сетки», а чтобы ритм профиля не превращался в сплошную стену фотографий. Композицию держим вертикальной и центрированной так, чтобы кадры сохранялись и в профиле, и в Reels-превью.</p>
-        </div>
-      </div>
-    </section>
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow">08 · ФИНАЛЬНЫЙ ФИЛЬТР</p>
+    <h2>Перед публикацией задаём один вопрос:<br>это мог снять любой красивый отель — или только SOIE?</h2>
+    <p class="lead">Если кадр можно без изменений поставить в Instagram любого бутик-отеля, он нам не нужен.</p>
+    <div class="rule-list">
+      <div class="rule">Booking — чтобы выбрать номер.</div>
+      <div class="rule">Instagram — чтобы захотеть жить внутри SOIE.</div>
+      <div class="rule">Историю города показываем через детали, а не костюм.</div>
+      <div class="rule">Не гонимся за трендами — строим свой визуальный язык.</div>
+    </div>
+  </div>
+</section>
+</main>
 
-    <section id="motion" class="section">
-      <div class="section-number">10</div>
-      <div class="section-copy">
-        <p class="eyebrow">REELS / MOTION LANGUAGE</p>
-        <h2>Видео — это не экскурсия по номеру.<br><span>Это ощущение присутствия.</span></h2>
-        <div class="motion-grid">
-          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="./-4450041590053018789.mov"></video><span>MOTION REF · 01</span></div>
-          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="./-5700102579430439523.mov"></video><span>MOTION REF · 02</span></div>
-          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="./4289855894515363739.mov"></video><span>MOTION REF · 03</span></div>
-          <div class="motion"><video muted autoplay loop playsinline controls preload="metadata" src="./70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video><span>MOTION REF · 04</span></div>
-        </div>
-        <div class="motion-rules">
-          <div class="motion-rule"><h3>Движение</h3><p>Смазанный проход, поворот головы, рука, ткань, дверь, отражение. Не всё должно быть идеально резким.</p></div>
-          <div class="motion-rule"><h3>Монтаж</h3><p>Не объясняем пространство линейно. Соединяем детали так, чтобы зритель сам достроил историю.</p></div>
-          <div class="motion-rule"><h3>Звук</h3><p>Дождь, шаги, ткань, чашка, лифт, улица, distant ferry. Саунд-дизайн может давать Стамбул без единого очевидного кадра.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section ivory">
-      <div class="section-number">11</div>
-      <div class="section-copy">
-        <p class="eyebrow">ФИНАЛЬНЫЙ ФИЛЬТР</p>
-        <h2>Перед публикацией проверяем,<br><span>что кадр — SOIE.</span></h2>
-        <div class="rules-grid">
-          <div><span>01</span><h3>Есть ли причина остановиться?</h3><p>Если это просто «красивый номер», возможно, он нужен Booking, а не имиджевому слою Instagram.</p></div>
-          <div><span>02</span><h3>Интерьер остался правдивым?</h3><p>Не переставляем и не выдумываем пространство ради картинки.</p></div>
-          <div><span>03</span><h3>История — деталь, а не костюм?</h3><p>Если культурная ссылка считывается раньше героя или отеля — её уже слишком много.</p></div>
-          <div><span>04</span><h3>В кадре есть жизнь?</h3><p>Движение, жест, отражение, объект, странный crop или пауза должны создавать историю.</p></div>
-          <div><span>05</span><h3>Есть ли функция?</h3><p>Кадр либо создаёт желание, либо показывает продукт, либо повышает доверие. Лучше — делает две задачи сразу.</p></div>
-          <div><span>06</span><h3>Узнаётся ли SOIE без логотипа?</h3><p>Конечная цель — собственный визуальный язык, а не постоянная маркировка изображения.</p></div>
-        </div>
-        <div class="owner-note"><strong>Главное правило</strong>SOIE не должен выглядеть как «ещё один красивый исторический отель в Стамбуле». Он должен выглядеть как место с собственным визуальным характером, который невозможно перепутать с соседним объектом.</div>
-      </div>
-    </section>
-
-    <section class="final">
-      <p class="eyebrow gold">SOIE VISUAL BRAND BOOK · 2026</p>
-      <h2>Мы не продаём «ещё один красивый номер в Султанахмете».</h2>
-      <p>Мы создаём причину выбрать SOIE.</p>
-      <div class="final-line">INSTAGRAM → DESIRE &nbsp;&nbsp;·&nbsp;&nbsp; BOOKING → CONFIDENCE &nbsp;&nbsp;·&nbsp;&nbsp; SOIE → BOOKING</div>
-    </section>
-  </main>
-
-  <footer>
-    <span>SOIE Boutique Hotel · Visual Brand Book v2</span>
-    <span>Working direction · Russian</span>
-  </footer>
-
-  <script>
-
-
-    // Reliable image loader: base64 is stored in small text assets so GitHub Pages renders every approved image consistently.
-    document.querySelectorAll('img[data-b64]').forEach(async img=>{
-      try{
-        const src=img.dataset.b64;
-        const b64=(await fetch(src,{cache:'no-store'}).then(r=>{
-          if(!r.ok) throw new Error(src+' '+r.status);
-          return r.text();
-        })).trim();
-        img.src='data:image/jpeg;base64,'+b64;
-      }catch(err){
-        console.error('SOIE image load failed',err);
-        img.alt=(img.alt||'SOIE image')+' — image unavailable';
-      }
-    });
-
-    const buttons=document.querySelectorAll('.feed-tabs button');
-    const layouts=document.querySelectorAll('.feed-layout');
-    buttons.forEach(btn=>btn.addEventListener('click',()=>{
-      buttons.forEach(b=>b.classList.remove('active'));
-      layouts.forEach(l=>l.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('feed-'+btn.dataset.feed)?.classList.add('active');
-    }));
-  </script>
+<footer><div class="wrap">SOIE · VISUAL BRAND BOOK · ISTANBUL</div></footer>
 </body>
 </html>
