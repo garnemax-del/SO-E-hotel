@@ -42,6 +42,11 @@ header{
 .logo{font-family:Georgia,"Times New Roman",serif;color:var(--gold);font-size:45px;letter-spacing:.12em}
 .version{font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.55)}
 nav{display:flex;gap:24px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.header-actions{display:flex;align-items:center;gap:16px}
+.lang-switch{display:flex;align-items:center;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:3px}
+.lang-switch a{min-width:38px;padding:7px 9px;border-radius:999px;text-align:center;font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.62);transition:.2s ease}
+.lang-switch a.active{background:var(--gold);color:var(--navy)}
+.lang-switch a:hover{color:#fff}
 .hero{position:relative;height:min(82vh,920px);min-height:620px;background:var(--navy);overflow:hidden}
 .hero video{position:absolute;inset:0;opacity:.55}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,22,47,.92) 0%,rgba(7,22,47,.55) 45%,rgba(7,22,47,.18) 100%)}
@@ -104,6 +109,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
 @media(max-width:900px){
   .wrap{width:min(100% - 36px,1320px)}
   nav{display:none}.header-inner{height:78px}.logo{font-size:36px}
+  .version{display:none}.header-actions{gap:0}
   .hero{height:72vh;min-height:560px}.hero-copy{padding-bottom:46px}
   section{padding:72px 0}
   .intro-grid,.editorial,.character-grid,.before-after,.motion-grid{grid-template-columns:1fr}
@@ -135,7 +141,13 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
       <a href="#characters">Герои</a>
       <a href="#motion">Motion</a>
     </nav>
-    <div class="version">VISUAL BRAND BOOK · NEW BUILD</div>
+    <div class="header-actions">
+      <div class="lang-switch" aria-label="Language switcher">
+        <a class="active" href="./" lang="ru" aria-current="page">RU</a>
+        <a href="./tr.html" lang="tr">TR</a>
+      </div>
+      <div class="version">VISUAL BRAND BOOK · NEW BUILD</div>
+    </div>
   </div>
 </header>
 
