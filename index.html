@@ -90,6 +90,7 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
 .motion-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .motion{background:#020916;min-height:620px;position:relative;overflow:hidden}
 .motion video{position:absolute;inset:0}
+.motion-featured{grid-column:1/-1;min-height:760px}
 .motion-copy{position:absolute;inset:auto 0 0;padding:80px 28px 28px;color:white;background:linear-gradient(transparent,rgba(4,13,30,.9))}
 .motion-copy b{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:400}
 .motion-copy p{font-size:13px;color:rgba(255,255,255,.72);margin:8px 0 0}
@@ -113,7 +114,7 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
 .feed-layout.active{display:grid}
 .insta-frame{background:#fff;padding:5px;box-shadow:0 18px 60px rgba(0,0,0,.22)}
 .insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:#fff}
-.insta-grid img{aspect-ratio:3/4;width:100%;height:auto;object-fit:cover;display:block}
+.insta-grid img,.insta-grid video{aspect-ratio:3/4;width:100%;height:auto;object-fit:cover;display:block;background:#07162f}
 .feed-explain{border-left:1px solid rgba(255,255,255,.2);padding-left:30px;color:rgba(255,255,255,.68)}
 .feed-explain h3{font-size:clamp(31px,3.2vw,46px);color:#fff;margin-bottom:20px}
 .feed-explain p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:0}
@@ -142,7 +143,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
   .editorial-copy{padding:42px 28px}.editorial .media-card{min-height:0;aspect-ratio:3/4}
   .full-grid{grid-template-columns:1fr}.media-card,.media-card.tall,.media-card.wide{min-height:0;aspect-ratio:4/5}
   .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:280px}.gallery figure:first-child{grid-row:span 2}.gallery figure:nth-child(4){grid-column:1/-1}
-  .motion{min-height:0;aspect-ratio:9/16}
+  .motion,.motion-featured{min-height:0;aspect-ratio:9/16;grid-column:auto}
   .rule-list{grid-template-columns:1fr}.rule,.rule:nth-child(odd),.rule:nth-child(even){padding:22px 0}
 }
 @media(max-width:560px){
@@ -256,7 +257,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
       <figure><img src="./IMG_6443.png" alt="SOIE — фото из исходного репозитория"><figcaption>SOIE · original hotel material</figcaption></figure>
       <figure><img src="./IMG_6447.png" alt="SOIE — фото из исходного репозитория"><figcaption>SOIE · original hotel material</figcaption></figure>
       <figure><img src="./IMG_6478.png" alt="SOIE — фото из исходного репозитория"><figcaption>SOIE · original hotel material</figcaption></figure>
-      <figure><img src="./IMG_6597.png" alt="SOIE — фото из исходного репозитория"><figcaption>SOIE · original hotel material</figcaption></figure>
+      <figure><video autoplay muted loop playsinline preload="metadata" src="./video.mov" aria-label="SOIE — новый motion visual"></video><figcaption>SOIE · motion / new visual</figcaption></figure>
       <figure><img src="./IMG_6856.png" alt="SOIE — телевизор с Ortaköy и логотипом SOIE"><figcaption>SOIE · Ortaköy / welcome screen</figcaption></figure>
       <figure><img src="./IMG_6808.png" alt="SOIE Kids — дети на лестнице"><figcaption>SOIE KIDS · лестница / движение</figcaption></figure>
       <figure><img src="./IMG_6807.png" alt="SOIE Kids — дети в ванной"><figcaption>SOIE KIDS · зеркало / деталь</figcaption></figure>
@@ -394,6 +395,10 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
         <video autoplay muted loop playsinline preload="metadata" src="./70345ED4-93F1-4D36-98E7-ECF5B42BED6B.mov"></video>
         <div class="motion-copy"><b>Атмосфера</b><p>Кадр должен оставлять ощущение SOIE даже без текста и логотипа.</p></div>
       </article>
+      <article class="motion motion-featured">
+        <video autoplay muted loop playsinline preload="metadata" src="./video.mov"></video>
+        <div class="motion-copy"><b>Новый визуальный эпизод</b><p>Видео работает как полноценный визуальный пост и добавляет движение в общую историю SOIE.</p></div>
+      </article>
     </div>
   </div>
 </section>
@@ -427,7 +432,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
         <div class="insta-grid">
           <img src="./IMG_6478.png" alt="SOIE интерьер">
           <img src="./IMG_6804.webp" alt="SOIE ванная">
-          <img src="./IMG_6597.png" alt="SOIE интерьерная деталь">
+          <video autoplay muted loop playsinline preload="metadata" src="./video.mov" aria-label="SOIE video post"></video>
           <img src="./IMG_6793.png" alt="SOIE Woman">
           <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
           <img src="./IMG_6802.webp" alt="SOIE коридор">
@@ -453,7 +458,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
           <img src="./IMG_6803.png" alt="SOIE Kids в коридоре">
           <img src="./IMG_6781.webp" alt="SOIE интерьер">
           <img src="./IMG_6780.png" alt="SOIE lifestyle">
-          <img src="./IMG_6597.png" alt="SOIE интерьерная деталь">
+          <video autoplay muted loop playsinline preload="metadata" src="./video.mov" aria-label="SOIE video post"></video>
         </div>
       </div>
       <div class="feed-explain recommended">
@@ -473,7 +478,7 @@ footer{background:#020916;color:rgba(255,255,255,.55);padding:28px 0;font-size:1
           <img src="./IMG_6856.png" alt="SOIE Ortaköy welcome screen">
           <img src="./IMG_6803.png" alt="SOIE Kids в коридоре">
           <img src="./IMG_6478.png" alt="SOIE интерьер">
-          <img src="./IMG_6597.png" alt="SOIE интерьерная деталь">
+          <video autoplay muted loop playsinline preload="metadata" src="./video.mov" aria-label="SOIE video post"></video>
           <img src="./IMG_6804.webp" alt="SOIE ванная">
         </div>
       </div>
